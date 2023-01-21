@@ -45,6 +45,8 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 	font-weight: 300;
 }
 
+
+
 /* sohag custom class start
  **************************************************/
 p {
@@ -52,6 +54,9 @@ p {
 }
 .basis_award{background-color:#345876;border:white;}
 .title_of_research_article{font-size:22px; line-height:30px;}
+.prof_justified{ text-align: justify !important ;}
+
+
 /* sohag custom class end
  **************************************************/
 
@@ -122,6 +127,8 @@ p {
 	width: 100%;
 }
 
+
+
 #overlay {
 	position: absolute;
 	top: 0;
@@ -168,7 +175,9 @@ p {
 }
 
 #profile .portrate {
-	background-image: url(../img/Sohag-kumar-saha.JPG);
+ /* background-image: url(../img/sohag.jpg); */
+ /* background-image: url(../img/sohag1.png); */
+	background-image: url(../img/Picture1.jpg);
 	width: 180px;
 	margin: 0 auto;
 	height: 180px;
