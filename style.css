@@ -16,7 +16,14 @@ Text Domain: faculty
 find the styles at the css folder
 */
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
+/* Apply the font to specific elements if needed */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
 
 
 
