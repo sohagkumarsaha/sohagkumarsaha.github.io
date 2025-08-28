@@ -154,6 +154,7 @@ ul.pre-styles li:hover{
     color: #555;
     text-align: justify;
 }
-
+.news-text a { word-break: break-word; overflow-wrap: anywhere; }
 
 .custom_margin_bottom{margin-bottom: 20px;}
+
