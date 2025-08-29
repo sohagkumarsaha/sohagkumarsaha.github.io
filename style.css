@@ -145,7 +145,7 @@ ul.pre-styles li:hover{
 
 .news-date {
     font-weight: 700; /* Bolder font for the date */
-    color: #ff0000;     /* color1 #03cc85 pest color color2: #333, color3: red*/ 
+    color: #03bb7a;     /* #03bb7a color1 #03cc85 pest color color2: #333, color3: red #ff0000*/  
     margin-right: 15px;
     flex-shrink: 0; /* Prevents the date from wrapping */
 }
@@ -156,5 +156,70 @@ ul.pre-styles li:hover{
 }
 .news-text a { word-break: break-word; overflow-wrap: anywhere; }
 
-.custom_margin_bottom{margin-bottom: 20px;}
+
+/* Add this to your CSS file */
+
+/* This class will be added by JavaScript to hide extra news items */
+/*.hidden-news {display: none;}*/
+
+/* Optional: Style for the "Read More" button */
+#load-more-news {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* You can use your theme's primary button class like 'btn btn-primary' as in the HTML */
+}
+
+.btn-danger {
+    color: #ffffff;
+    background-color: #03bb7a;
+    border-color: #05b577;
+}
+
+.btn-danger:hover {
+    color: #ffffff;
+    background-color: #0e704e;
+    border-color: #05b577;
+}
+
+/* Hide all beyond 10 initially */
+.custom-news-list li {
+    display: none;
+}
+.custom-news-list li.visible {
+    display: list-item;
+}
+
+
+
+
+.custom-news-list {
+    padding-left: 0; /* remove default bullets */
+    list-style: none; /* no default list style */
+}
+
+.custom-news-list li {
+    margin-bottom: 15px;
+    display: none; /* controlled by JS */
+}
+
+.custom-news-list li.visible {
+    display: flex;          /* flexbox layout */
+    align-items: flex-start; /* date aligned at top of text */
+}
+
+.custom-news-list .news-date {
+    min-width: 90px;        /* keeps date aligned vertically */
+    font-weight: bold;
+    margin-right: 10px;
+    white-space: nowrap;    /* prevent wrapping of date */
+}
+
+.custom-news-list .news-text {
+    flex: 1;                /* take remaining space */
+    text-align: justify;    /* justify the text */
+}
+
 

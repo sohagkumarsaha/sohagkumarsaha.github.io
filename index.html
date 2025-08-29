@@ -204,9 +204,9 @@
                                     <div class="col-sm-12 col-md-7">
                                         <h3 class="title">About Me</h3>
                                         <p>
-										I'm <b>Sohag Kumar Saha</b>, currently working as a <b> Graduate Research Assistant </b>at the Smart Grid Lab under the Center for Energy Systems Research (CESR) at <b>Tennessee Technological University</b>, TN, USA and doing research towards my <b>Ph.D. in Engineering</b> degree focusing on  <b>Power Systems, Energy and Control Systems</b>. My research interests include: Energy Management Systems, Adaptive Critic Design, Controller Hardware-in-the-Loop (CHIL) Simulation, Smart Grid Systems, Integration of Renewable Energy, Battery Energy Storage Systems, PV Hosting Capacity, Peak Shaving, Economic Load Dispatch, Optimization using Meta-heuristic Algorithms and application of Machine Learning in Smart Grids. 
+										I'm <b>Sohag Kumar Saha</b>, currently working as a <b> Graduate Research Assistant </b>at the Smart Grid Lab, Center for Energy Systems Research (CESR), <b>Tennessee Technological University</b>, TN, USA. Currently I'm continuing research towards my <b>Ph.D. in Engineering</b> degree focusing on  <b>Power Systems, Energy and Control Systems</b>. My research interests include: Energy Management Systems, Adaptive Critic Design, Controller Hardware-in-the-Loop (CHIL) Simulation, Smart Grid Systems, Integration of Renewable Energy, Battery Energy Storage Systems, PV Hosting Capacity, Peak Shaving, Economic Load Dispatch, Optimization using Meta-heuristic Algorithms and application of Machine Learning in Smart Grids. 
 
-										<p>Earlier, I have completed my <b>B.Sc.</b> in <b>Electrical &amp; Electronic Engineering (EEE)</b>, from <b>Pabna University of Science &amp; Technology (PUST),</b> Pabna, Bangladesh in Jan, 2014 and secured the <b>1st Class 1st</b> position in the class among 52 students based on merit  with  <b>CGPA 3.87 </b>(on a scale of 4.00).
+										<p>In December 2024, I have received <b>Masters of Science in Electrical and Computer Engineering degree</b> from Tennessee Technological University, Cookevillee, TN, USA. Earlier, I have completed my <b>B.Sc.</b> in <b>Electrical &amp; Electronic Engineering (EEE)</b>, from <b>Pabna University of Science &amp; Technology (PUST),</b> Pabna, Bangladesh in Jan, 2014 and secured the <b>1st Class 1st</b> position in the class among 52 students based on merit  with  <b>CGPA 3.87 </b>(on a scale of 4.00).
 										</p>
 										
 										<p>
@@ -410,13 +410,21 @@
 
 
                 </ul>
+
+                <!-- Read More button -->
+                <div class="text-center">
+                    <button id="load-more-news" class="btn btn-danger">Read More Updates...</button>
+                </div>
+
             </div>
         </div>
     </div>
 </div>
 
-
 <!-- END RECENT NEWS SECTION-->
+
+
+
 
                     <div class="pagecontents">
                         <div class="section color-1">
@@ -655,7 +663,7 @@
                                                 <div class="date">2025</div>
                                                 <div class="circle"></div>
                                                 <div class="data">
-                                                    <div class="subject">NSF Grant and CESR's travel grant for conference participation</div>
+                                                    <div class="subject">NSF Grant and CESR's travel grant for participation in TPEC 2025 conference</div>
                                                     <div class="text row">
                                                         <div class="col-md-2">
                                                             <img alt="NSF grant award" class="thumbnail img-responsive custom_margin_bottom" src="img/nsf_grant.png" >
@@ -673,7 +681,7 @@
                                                 <div class="date">2024</div>
                                                 <div class="circle"></div>
                                                 <div class="data">
-                                                    <div class="subject">Travel grant from CESR, Tennessee Tech for conference participation</div>
+                                                    <div class="subject">Travel grant from CESR, Tennessee Tech for participation in NAPS 2024 conference</div>
                                                     <div class="text row">
                                                         <div class="col-md-2">
                                                             <img alt="NAPS Conf 2024" class="thumbnail img-responsive custom_margin_bottom" src="img/cesr_tntech.png" >
@@ -690,7 +698,7 @@
                                                 <div class="date">2023</div>
                                                 <div class="circle"></div>
                                                 <div class="data">
-                                                    <div class="subject">Travel grant from CESR for conference participation</div>
+                                                    <div class="subject">Travel grant from CESR for participation in ARC Energy Summit Conference 2023</div>
                                                     <div class="text row">
                                                         <div class="col-md-2">
                                                             <img alt="Travel grant award" class="thumbnail img-responsive custom_margin_bottom" src="img/cesr_tntech.png" >
@@ -788,8 +796,8 @@
                                                             <img alt="first position in undergrad" class="thumbnail img-responsive custom_margin_bottom" src="img/university_gold_medal_pust.gif" >
                                                         </div>
                                                         <div class="col-md-10">
-                                                           <p>I am very happy to share that, I secureds the first position in the dept. of Electrical and Electronic Engineering at Pabna University of Science and Technology consecutively in all academic terms (from first semester to 8th semester). 
-                                                           To the best of my knowledge, I was the only student of our session of Pabna University of Science &amp; Technology (PUST), who secured the top position in all academic terms. Thanks to almighty, my parents, teachers, friends and well wishers, because without the support of them, it would not be possible to keep the successful journey. I am now looking forward to acheiving more in my future to build a successful career in Electrical Engineering.</p> 
+                                                           <p>I am very happy to share that, I secured the first position in the dept. of Electrical and Electronic Engineering at Pabna University of Science and Technology consecutively in all academic terms (from first semester to 8th semester). 
+                                                           It is a matter of pleasure that, I was the only student of our session of Pabna University of Science &amp; Technology (PUST), who secured the top position in all academic terms. Thanks to almighty, my parents, teachers, friends and well wishers, because without the support of them, it would not be possible to keep the successful journey. I am now looking forward to acheiving more in my future to build a successful career in Electrical Engineering.</p> 
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2845,6 +2853,30 @@
             
             </div>
         </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const newsItems = document.querySelectorAll(".custom-news-list li");
+        const loadMoreBtn = document.getElementById("load-more-news");
+        const itemsToShow = 10; // first 10 items
+        
+        let visibleCount = itemsToShow;
+
+        // Initially show only first 10
+        newsItems.forEach((item, index) => {
+            if (index < visibleCount) {
+                item.classList.add("visible");
+            }
+        });
+
+        // Button click event
+        loadMoreBtn.addEventListener("click", function () {
+            newsItems.forEach(item => item.classList.add("visible"));
+            loadMoreBtn.style.display = "none"; // hide button after expanding
+        });
+    });
+    </script>
+
 
 
     </body>
