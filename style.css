@@ -188,11 +188,10 @@ ul.pre-styles li:hover{
 .custom-news-list li {
     display: none;
 }
+
 .custom-news-list li.visible {
     display: list-item;
 }
-
-
 
 
 .custom-news-list {
@@ -222,5 +221,5 @@ ul.pre-styles li:hover{
     text-align: justify;    /* justify the text */
 }
 
-
 .margin_bottom{margin-bottom: 20px;}
+.custom_margin_bottom{margin-bottom: 20px;}
