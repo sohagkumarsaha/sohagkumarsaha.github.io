@@ -228,7 +228,7 @@ ul.pre-styles li:hover{
 
 /* --- Custom Styles for Visitor Map --- */
 
-#visitor-map-container { */
+#visitor-map-container {
   margin-top: 30px;         /* Adds space below the title */  
   padding: 15px;            /* Adds a little space inside the border */
   background-color: #ffffff;/* A clean white background for the map */
