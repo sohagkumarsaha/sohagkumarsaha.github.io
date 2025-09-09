@@ -228,15 +228,15 @@ ul.pre-styles li:hover{
 
 /* --- Custom Styles for Visitor Map --- */
 
-/* #visitor-map-container { */
-/*  margin-top: 30px;         /* Adds space below the title */
-/*  padding: 15px;            /* Adds a little space inside the border */
-/*  background-color: #ffffff;/* A clean white background for the map */
-/*  border-radius: 8px;       /* Gives the container soft, rounded corners */
-/*  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
-/*  overflow: hidden;         /* Ensures the map stays within the rounded corners */
-/*  text-align: center;       /* Centers the map script output */
-/*}
+#visitor-map-container { */
+  margin-top: 30px;         /* Adds space below the title */  
+  padding: 15px;            /* Adds a little space inside the border */
+  background-color: #ffffff;/* A clean white background for the map */
+  border-radius: 8px;       /* Gives the container soft, rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  overflow: hidden;         /* Ensures the map stays within the rounded corners */
+  text-align: center;       /* Centers the map script output */
+}
 
 /* Optional: Ensures the map itself is responsive */
-/* #visitor-map-container iframe,#visitor-map-container object,#visitor-map-container embed {max-width: 100%;border: none;} */
+#visitor-map-container iframe,#visitor-map-container object,#visitor-map-container embed {max-width: 100%;border: none;}
