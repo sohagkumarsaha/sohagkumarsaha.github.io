@@ -2958,11 +2958,11 @@
     document.addEventListener("DOMContentLoaded", function () {
         const newsItems = document.querySelectorAll(".custom-news-list li");
         const loadMoreBtn = document.getElementById("load-more-news");
-        const itemsToShow = 10; // first 10 items
+        const itemsToShow = 7; // first 10 items
         
         let visibleCount = itemsToShow;
 
-        // Initially show only first 10
+        // Initially show only first 7 items
         newsItems.forEach((item, index) => {
             if (index < visibleCount) {
                 item.classList.add("visible");
