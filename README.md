@@ -7,7 +7,7 @@ https://github.com/sohagkumarsaha/sohagkumarsaha.github.io/blob/staging/GITHUB_D
 
 
 # 📄 README Files
-1. Main README (Comprehensive Website Guide)
+Main README (Comprehensive Website Guide)
 https://github.com/sohagkumarsaha/sohagkumarsaha.github.io/blob/staging/README.md
 
 Content: Complete O&M guide with setup, configuration, creating content, deployment workflow, troubleshooting
