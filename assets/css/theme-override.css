@@ -1,0 +1,339 @@
+/*
+ * Auto Day/Night Theme Override
+ * Applied via JavaScript class on <html> element based on US Central Time.
+ * Dark mode: 8:00 PM – 6:00 AM
+ * Light mode: 6:00 AM – 8:00 PM (uses Minimal Mistakes default skin)
+ */
+
+/* =========================================================
+   DARK MODE OVERRIDES
+   ========================================================= */
+html.dark-mode {
+  /* Base colors */
+  --background-color: #1a1a2e;
+  --text-color: #e0e0e0;
+  --muted-text-color: #a0a0a0;
+  --link-color: #7eb8f7;
+  --link-hover-color: #a8d4ff;
+  --border-color: #2d2d4e;
+  --code-background: #0d0d1a;
+  --nav-background: #16213e;
+  --sidebar-background: #16213e;
+  --footer-background: #0f0f23;
+  --notice-background: #1e2a45;
+  --card-background: #16213e;
+}
+
+html.dark-mode body {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+html.dark-mode .masthead {
+  background-color: #16213e;
+  border-bottom: 1px solid #2d2d4e;
+}
+
+html.dark-mode .masthead__inner-wrap {
+  background-color: #16213e;
+}
+
+html.dark-mode .greedy-nav {
+  background: #16213e;
+}
+
+html.dark-mode .greedy-nav a {
+  color: #e0e0e0;
+}
+
+html.dark-mode .greedy-nav a:hover {
+  color: #7eb8f7;
+}
+
+html.dark-mode .greedy-nav .visible-links a::before {
+  background: #7eb8f7;
+}
+
+html.dark-mode .page__content {
+  color: #e0e0e0;
+}
+
+html.dark-mode .page__content h1,
+html.dark-mode .page__content h2,
+html.dark-mode .page__content h3,
+html.dark-mode .page__content h4,
+html.dark-mode .page__content h5,
+html.dark-mode .page__content h6 {
+  color: #ffffff;
+}
+
+html.dark-mode a {
+  color: #7eb8f7;
+}
+
+html.dark-mode a:hover {
+  color: #a8d4ff;
+}
+
+html.dark-mode .sidebar {
+  background-color: #16213e;
+}
+
+html.dark-mode .author__name {
+  color: #ffffff;
+}
+
+html.dark-mode .author__bio {
+  color: #c0c0c0;
+}
+
+html.dark-mode .author__urls-wrapper .btn {
+  background-color: #2d2d4e;
+  color: #e0e0e0;
+  border-color: #3d3d5e;
+}
+
+html.dark-mode .author__urls a {
+  color: #7eb8f7;
+}
+
+html.dark-mode .author__urls a:hover {
+  color: #a8d4ff;
+}
+
+html.dark-mode .nav__title {
+  color: #7eb8f7;
+  border-color: #2d2d4e;
+}
+
+html.dark-mode .toc .nav__title {
+  background: #2d2d4e;
+  color: #e0e0e0;
+}
+
+html.dark-mode .toc__menu a {
+  color: #c0c0c0;
+  border-bottom-color: #2d2d4e;
+}
+
+html.dark-mode .toc__menu a:hover {
+  color: #7eb8f7;
+  background-color: #2d2d4e;
+}
+
+html.dark-mode .page__footer {
+  background-color: #0f0f23;
+  color: #a0a0a0;
+}
+
+html.dark-mode .page__footer a {
+  color: #7eb8f7;
+}
+
+html.dark-mode .page__footer-copyright {
+  color: #808080;
+}
+
+html.dark-mode .notice {
+  background-color: #1e2a45;
+  border-color: #2d3d5e;
+  color: #e0e0e0;
+}
+
+html.dark-mode .notice--info {
+  background-color: #0d1f3c;
+  border-color: #1a3a6b;
+  color: #c0d8f0;
+}
+
+html.dark-mode .notice--success {
+  background-color: #0d2d1a;
+  border-color: #1a5c35;
+  color: #90d4a0;
+}
+
+html.dark-mode .notice--warning {
+  background-color: #2d1f00;
+  border-color: #6b4a00;
+  color: #f0c060;
+}
+
+html.dark-mode .notice--danger {
+  background-color: #2d0d0d;
+  border-color: #6b1a1a;
+  color: #f08080;
+}
+
+html.dark-mode table {
+  border-color: #2d2d4e;
+}
+
+html.dark-mode th {
+  background-color: #2d2d4e;
+  color: #e0e0e0;
+  border-color: #3d3d5e;
+}
+
+html.dark-mode td {
+  border-color: #2d2d4e;
+  color: #e0e0e0;
+}
+
+html.dark-mode tr:nth-child(even) {
+  background-color: #1e1e38;
+}
+
+html.dark-mode code {
+  background-color: #0d0d1a;
+  color: #7eb8f7;
+}
+
+html.dark-mode pre {
+  background-color: #0d0d1a;
+  border-color: #2d2d4e;
+}
+
+html.dark-mode blockquote {
+  border-color: #7eb8f7;
+  color: #c0c0c0;
+  background-color: #1e1e38;
+}
+
+/* =========================================================
+   MOBILE/TABLET AUTHOR SIDEBAR
+   ========================================================= */
+.author__urls-details {
+  display: block;
+}
+
+.author__follow-btn {
+  cursor: pointer;
+  list-style: none;
+  display: none !important;
+}
+
+.author__urls-details > summary {
+  display: none !important;
+}
+
+.author__follow-btn::marker,
+.author__follow-btn::-webkit-details-marker {
+  content: "";
+  display: none;
+}
+
+.author__urls-details[open] .author__urls {
+  margin-top: 0.5rem;
+}
+
+.author__urls-details .author__urls {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .sidebar .author__avatar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar .author__avatar,
+  .sidebar .author__content,
+  .sidebar .author__urls-wrapper {
+    text-align: center;
+  }
+
+  .sidebar .author__avatar img {
+    margin: 0 auto;
+  }
+
+  .author__follow-btn {
+    display: inline-block !important;
+    margin: 0 auto;
+  }
+
+  .author__urls-details > summary {
+    display: inline-block !important;
+  }
+
+  .author__urls-details {
+    text-align: center;
+  }
+
+  .author__urls-details .author__urls {
+    display: none;
+  }
+
+  .author__urls-details[open] .author__urls {
+    display: block;
+  }
+
+  .author__urls {
+    display: inline-block;
+    margin: 0.25rem auto 0;
+    text-align: left;
+  }
+
+  .author__urls li,
+  .author__urls a {
+    text-align: left;
+  }
+}
+
+html.dark-mode hr {
+  border-color: #2d2d4e;
+}
+
+html.dark-mode .page__hero--overlay {
+  background-color: #1a1a2e;
+}
+
+html.dark-mode .btn--primary {
+  background-color: #2d5a9e;
+  border-color: #3d6aae;
+  color: #ffffff;
+}
+
+html.dark-mode .btn--primary:hover {
+  background-color: #3d6aae;
+  border-color: #5d8abe;
+}
+
+html.dark-mode .archive__item-title a {
+  color: #7eb8f7;
+}
+
+html.dark-mode .archive__item-title a:hover {
+  color: #a8d4ff;
+}
+
+html.dark-mode .archive__item-excerpt {
+  color: #b0b0b0;
+}
+
+/* Search */
+html.dark-mode .search-content {
+  background-color: #1a1a2e;
+}
+
+html.dark-mode .search-input {
+  background-color: #2d2d4e;
+  color: #e0e0e0;
+  border-color: #3d3d5e;
+}
+
+/* Pagination */
+html.dark-mode .pagination--pager {
+  background-color: #2d2d4e;
+  color: #e0e0e0;
+  border-color: #3d3d5e;
+}
+
+html.dark-mode .pagination--pager:hover {
+  background-color: #3d3d5e;
+}
+
+
+/* Blog page right-sidebar font size */
+.nav__list .nav__items {
+    font-size: 0.85rem;
+}

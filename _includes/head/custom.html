@@ -1,0 +1,61 @@
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWM92MKJ72"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HWM92MKJ72');
+</script>
+
+<!-- SEO Meta Tags -->
+<meta name="author" content="Sohag Kumar Saha">
+<meta name="description" content="Ph.D. Researcher in Power Systems and Energy at Tennessee Technological University. IEEE Senior Member with expertise in Smart Grid, Energy Management Systems, Battery Energy Storage, Renewable Energy Integration, Deep Reinforcement Learning, and Hardware-in-the-Loop Simulation. Research interests include power system modeling, intelligent control, and machine learning applications in energy systems.">
+<meta name="keywords" content="Sohag Kumar Saha, Power Systems, Energy Engineering, Smart Grid, Microgrid, Renewable Energy, Battery Energy Storage Systems, BESS, Deep Reinforcement Learning, Machine Learning, Hardware-in-the-Loop, CHIL, Typhoon HIL, Controller Design, Energy Management, Tennessee Tech, PhD, IEEE Senior Member, Power Electronics, Grid Modernization">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Sohag Kumar Saha - Power Systems & Energy Engineering Research">
+<meta property="og:description" content="Ph.D. Researcher specializing in Power Systems, Energy, Control, and Machine Learning. Smart Grid Lab, Tennessee Technological University.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sohag.net/minimal-mistakes/">
+<meta property="og:image" content="https://sohag.net/minimal-mistakes/assets/images/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sohag Kumar Saha - Ph.D. Researcher">
+<meta name="twitter:description" content="Power Systems, Energy, Control & Machine Learning Research">
+
+<!-- Theme pre-apply: prevent flash of wrong theme -->
+<script>
+  (function () {
+    var saved = localStorage.getItem('theme-preference');
+    var dark;
+    if (saved === 'dark') { dark = true; }
+    else if (saved === 'light') { dark = false; }
+    else {
+      var h = parseInt(new Date().toLocaleString('en-US', { timeZone: 'America/Chicago', hour: 'numeric', hour12: false }), 10);
+      dark = (h < 6 || h >= 20);
+    }
+    document.documentElement.classList.add(dark ? 'dark-mode' : 'light-mode');
+  })();
+</script>
+
+<!-- MathJax v3 — renders LaTeX equations ($, $$, \( \), \[ \]) -->
+<script>
+  MathJax = {
+    tex: {
+      inlineMath:  [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      tags: 'ams'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    startup: {
+      ready() {
+        MathJax.startup.defaultReady();
+      }
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+
+<!-- Follow button handler for mobile/tablet -->
+<script src="{{ '/assets/js/follow-button.js' | relative_url }}" defer></script>

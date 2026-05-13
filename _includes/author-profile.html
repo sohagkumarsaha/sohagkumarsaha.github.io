@@ -1,0 +1,93 @@
+{% assign locale = include.locale | default: site.locale %}
+{% assign author = page.author | default: page.authors[0] | default: site.author %}
+{% assign author = site.data.authors[author] | default: author %}
+
+<div class="sidebar">
+  <div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  {% if author.avatar %}
+  <div class="author__avatar">
+    <a href="{{ '/' | relative_url }}" title="{{ author.name }}">
+      <img src="{{ author.avatar | relative_url }}"
+           alt="{{ author.name }}"
+           itemprop="image"
+           class="u-photo author__avatar-img">
+    </a>
+  </div>
+  {% endif %}
+
+  <div class="author__content">
+    <!-- <p class="author__pronunciation">So&middot;h&#257;g&ensp;Ku&middot;m&#257;r&ensp;S&#257;&middot;h&#257;</p> -->
+    <p class="author__name">{{ author.name }}</p>
+    <div class="author__bio p-note" itemprop="description">
+      <span class="author__title">Senior Member, IEEE</span><br>
+      Graduate Research Assistant<br>
+      Tennessee Tech University, USA
+    </div>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <details class="author__urls-details" open>
+      <summary class="btn btn--inverse author__follow-btn">{{ site.data.ui-text[locale].follow_label | remove: ":" | default: "Follow" }}</summary>
+      <ul class="author__urls social-icons" role="list">
+
+      {% if author.location %}
+      <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+        <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i>
+        <span itemprop="name" class="p-locality">{{ author.location }}</span>
+      </li>
+      {% endif %}
+
+      <li>
+        <a href="https://www.researchgate.net/profile/Sohag-Kumar-Saha"
+           itemprop="sameAs" rel="nofollow noopener noreferrer me" target="_blank">
+          <i class="fab fa-fw fa-researchgate" aria-hidden="true"></i>
+          <span class="label">ResearchGate</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://scholar.google.com/citations?user=jll3A6IAAAAJ"
+           itemprop="sameAs" rel="nofollow noopener noreferrer me" target="_blank">
+          <i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i>
+          <span class="label">Google Scholar</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.linkedin.com/in/sohag16/"
+           itemprop="sameAs" rel="nofollow noopener noreferrer me" target="_blank">
+          <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
+          <span class="label">LinkedIn</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://github.com/sohagkumarsaha"
+           itemprop="sameAs" rel="nofollow noopener noreferrer me" target="_blank">
+          <i class="fab fa-fw fa-github" aria-hidden="true"></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://orcid.org/0000-0002-3713-3996"
+           itemprop="sameAs" rel="nofollow noopener noreferrer me" target="_blank">
+          <i class="fab fa-fw fa-orcid" aria-hidden="true"></i>
+          <span class="label">ORCID</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="mailto:sohag@ieee.org" rel="me" class="u-email">
+          <meta itemprop="email" content="sohag@ieee.org" />
+          <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i>
+          <span class="label">Email</span>
+        </a>
+      </li>
+
+      </ul>
+    </details>
+  </div>
+  </div>
+</div>

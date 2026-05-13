@@ -1,0 +1,44 @@
+{% assign locale = include.locale | default: site.locale %}
+{% unless site.atom_feed.hide %}
+  {% assign show_atom = true %}
+{% endunless %}
+{% if site.footer.links or show_atom %}
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    {% if site.data.ui-text[locale].follow_label %}
+      <li><strong>{{ site.data.ui-text[locale].follow_label }}</strong></li>
+    {% endif %}
+    {% if site.footer.links %}
+      {% for link in site.footer.links %}
+        {% if link.label and link.url %}
+          <li>
+            <a href="{{ link.url }}" rel="nofollow noopener noreferrer" target="_blank" class="footer-social-link">
+              <i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i>
+              {{ link.label }}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% unless site.atom_feed.hide %}
+      <li>
+        <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}">
+          <i class="fas fa-fw fa-square-rss" aria-hidden="true"></i>
+          {{ site.data.ui-text[locale].feed_label | default: "Feed" }}
+        </a>
+      </li>
+    {% endunless %}
+    <li>
+      <a href="{{ '/sitemap/' | relative_url }}" title="Sitemap">
+        <i class="fas fa-fw fa-sitemap" aria-hidden="true"></i> Sitemap
+      </a>
+    </li>
+  </ul>
+</div>
+{% endif %}
+
+<div class="page__footer-copyright">
+  &copy; {{ site.time | date: '%Y' }} <a href="{{ site.url }}">{{ site.name }}</a>.
+  Powered by <a href="https://jekyllrb.com" rel="nofollow" target="_blank">Jekyll</a>
+  &amp; Modified <a href="https://mmistakes.github.io/minimal-mistakes/" rel="nofollow" target="_blank">Minimal Mistakes</a> Theme.
+</div>

@@ -1,0 +1,61 @@
+{% assign locale = include.locale | default: site.locale %}
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
+        <a class="site-title" href="{{ '/' | relative_url }}">
+          Sohag<span class="site-title--light"> Kumar Saha</span>
+        </a>
+        <ul class="visible-links" id="nav-links">
+          {%- for link in site.data.navigation.main -%}
+            <li class="masthead__menu-item">
+              <a href="{{ link.url | relative_url }}"
+                {% if link.description %} title="{{ link.description }}"{% endif %}
+                {% if link.target %} target="{{ link.target }}"{% endif %}
+              >{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+        <script>
+        (function(){
+          var path = window.location.pathname.replace(/\/+$/, '').toLowerCase();
+          var home = '{{ "/" | relative_url }}'.replace(/\/+$/, '').toLowerCase();
+          var links = document.querySelectorAll('#nav-links .masthead__menu-item a');
+          for (var i = 0; i < links.length; i++) {
+            try {
+              var href = new URL(links[i].href).pathname.replace(/\/+$/, '').toLowerCase();
+              var isHome = (href === home);
+              if (isHome && path === home) {
+                links[i].parentElement.classList.add('masthead__menu-item--active');
+              } else if (!isHome && href !== '' && path.indexOf(href) === 0) {
+                links[i].parentElement.classList.add('masthead__menu-item--active');
+              }
+            } catch(e) {}
+          }
+        })();
+        </script>
+
+        <!-- Search toggle (enabled when search: true in _config.yml) -->
+        {% if site.search == true %}
+        <button class="search__toggle" type="button" aria-label="Toggle search">
+          <span class="visually-hidden">{{ site.data.ui-text[locale].search_label | default: "Toggle search" }}</span>
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+        {% endif %}
+
+        <!-- Day / Night manual toggle -->
+        <button class="theme-toggle" id="theme-toggle-btn" type="button"
+                aria-label="Toggle light/dark theme" title="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
+        </button>
+
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[locale].menu_label | default: "Toggle menu" }}</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{%- assign locale = page.locale | default: layout.locale | default: site.locale %}
+
+<div id="main" role="main" class="blog-layout">
+  <!-- Left column: author profile (wrapped in .sidebar.sticky like MM's sidebar.html) -->
+  <div class="blog-col-left sidebar sticky">
+    {% include author-profile.html locale=locale %}
+  </div>
+
+  <!-- Center column: blog posts -->
+  <div class="blog-col-center">
+    {{ content }}
+
+    <h3 class="archive__subtitle">{{ site.data.ui-text[locale].recent_posts | default: "Recent Posts" }}</h3>
+
+    {% if paginator %}
+      {% assign posts = paginator.posts %}
+    {% else %}
+      {% assign posts = site.posts %}
+    {% endif %}
+
+    {% assign entries_layout = page.entries_layout | default: 'list' %}
+    <div class="entries-{{ entries_layout }}">
+      {% include documents-collection.html locale=locale entries=posts type=entries_layout %}
+    </div>
+
+    {% include paginator.html locale=locale %}
+  </div>
+
+  <!-- Right column: browse / categories / tags -->
+  <div class="blog-col-right">
+    <div class="blog-nav-sticky">
+      {% include nav_list locale=locale nav="blog-categories" %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1201 @@
+---
+# Only the main partials matter to control what is included
+---
+@charset "utf-8";
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* ================================================================
+   Google Fonts — Ubuntu (matching archfx.me)
+   ================================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+/* ================================================================
+   Smooth animations
+   ================================================================ */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* ================================================================
+   Base — Ubuntu font, 16px
+   ================================================================ */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  font-family: "Ubuntu", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+#main {
+  max-width: 1280px !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ================================================================
+   Masthead
+   ================================================================ */
+.masthead { border-bottom: 1px solid #e5e5e5; font-family: "Ubuntu", sans-serif; }
+.masthead__inner-wrap { max-width: 1280px; margin: 0 auto; }
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.35em;
+  letter-spacing: -0.01em;
+  font-family: "Ubuntu", sans-serif;
+  padding: 0.2em 0;
+}
+.site-title--light { font-weight: 300; opacity: 0.9; }
+
+.greedy-nav .visible-links a {
+  font-size: 0.875em;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Active nav item — highlight current page */
+.masthead__menu-item--active > a {
+  color: #0a66c2 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #0a66c2;
+  padding-bottom: 2px;
+}
+html.dark-mode .masthead__menu-item--active > a {
+  color: var(--link) !important;
+  border-bottom-color: var(--link);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.35em;
+  margin-left: 0.3em;
+  border-radius: 50%;
+  color: inherit;
+  font-size: 1em;
+  line-height: 1;
+  transition: opacity 0.2s;
+  vertical-align: middle;
+}
+.theme-toggle:hover { opacity: 0.7; }
+.theme-toggle i { font-size: 0.9em; }
+
+/* ================================================================
+   LEFT sidebar — sticky on desktop only, left-aligned
+   ================================================================ */
+.sidebar { 
+  font-family: "Ubuntu", sans-serif;
+  opacity: 1 !important;
+  filter: brightness(1) !important;
+  -webkit-filter: brightness(1) !important;
+}
+
+/* Sticky only on large screens */
+@media (min-width: 1025px) {
+  .sidebar.sticky,
+  .blog-col-left.sidebar.sticky {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 2em !important;
+    max-height: calc(100vh - 4em) !important;
+    z-index: 10 !important;
+    opacity: 1 !important;
+    filter: brightness(1) !important;
+  }
+}
+
+/* Force full brightness on desktop sidebar normally */
+@media (min-width: 1025px) {
+  .sidebar,
+  .sidebar.sticky,
+  aside.sidebar {
+    opacity: 1 !important;
+    filter: brightness(1) !important;
+    -webkit-filter: brightness(1) !important;
+  }
+}
+
+/* Round profile photo — gradient ring on ALL screen sizes */
+.author__avatar { display: block; text-align: center; margin-bottom: 0.65em; }
+
+/* Desktop: Constrain sidebar width to content */
+@media (min-width: 1025px) {
+  .sidebar {
+    width: 240px !important;
+    max-width: 240px !important;
+  }
+}
+
+.author__avatar .author__avatar-img,
+.author__avatar-img {
+  border-radius: 50% !important;
+  width: 140px !important;
+  height: 140px !important;
+  max-width: 140px !important;
+  object-fit: cover !important;
+  padding: 3px !important;
+  border: 3px solid transparent !important;
+  /* blue-steel gradient ring */
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, #5b9bd5 0%, #aed6f1 50%, #5b9bd5 100%) border-box !important;
+  display: block !important;
+  transition: border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.4s ease,
+              transform 0.4s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Desktop: Hover effect — circular to rectangular */
+@media (min-width: 1025px) {
+  .sidebar:hover .author__avatar-img,
+  .author__avatar:hover .author__avatar-img {
+    border-radius: 12px !important;
+    box-shadow: 0 6px 16px rgba(91, 155, 213, 0.25) !important;
+    transform: scale(1.02) !important;
+  }
+}
+
+.author__content { text-align: left; margin: 0; padding: 0; }
+
+.author__name {
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+/* Pronunciation + bio + title all share the same font size */
+.author__pronunciation {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.90em;
+  font-weight: 600;
+  color: #333;
+  margin: 0.25em 0 0.4em;
+  text-align: left;
+  letter-spacing: 0.01em;
+}
+
+.sidebar .author__pronunciation {
+  font-size: 0.90em !important;
+  font-weight: 600 !important;
+}
+
+
+.author__bio {
+  font-size: 0.875em;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0 0 0.6em;
+  color: #555;
+}
+.author__title { font-weight: 600; }
+
+.author__urls-wrapper { margin-top: 0.4em; }
+.author__urls-wrapper .btn { font-size: 0.73em; padding: 0.28em 0.55em; }
+
+.author__urls { font-family: "Ubuntu", sans-serif; font-size: 0.875em; }
+.author__urls.social-icons li { padding: 1px 0; line-height: 1.00; }
+.author__urls.social-icons li:first-child {
+  margin-bottom: 1.25em;
+}
+.author__urls.social-icons li i {
+  width: 1.25em;
+  text-align: center;
+  margin-right: 0.35em;
+  font-size: 1em;
+  vertical-align: middle;
+  display: inline-block;
+  opacity: 1 !important;
+  filter: none !important;
+  transition: transform 0.2s ease !important; /* allow icon to scale smoothly */
+}
+
+/* ── Full brightness always: target every opacity source MM uses ── */
+.author__urls-wrapper,
+.author__urls,
+.author__urls li,
+.author__urls li a,
+.author__urls li i,
+.author__urls li span,
+.sidebar .author__urls,
+.sidebar .author__urls li,
+.sidebar .author__urls li a {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.author__urls li a,
+.sidebar .author__urls li a {
+  text-decoration: none;
+  color: #222;
+  display: flex;
+  align-items: center;
+  padding: 3px 6px;
+  border-radius: 5px;
+  transition: opacity 0.2s ease, background-color 0.2s ease, filter 0.2s ease;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Desktop: on hover, reduce opacity */
+@media (min-width: 1025px) {
+  .author__urls li a:hover,
+  .sidebar .author__urls li a:hover {
+    opacity: 0.90 !important;
+    filter: brightness(0.95) !important;
+  }
+}
+
+/* Hard-fix for laptop/retina displays where theme might still apply opacity */
+@media (min-width: 64em) {
+  .sidebar .author__urls li a,
+  .sidebar .author__urls li a i,
+  .sidebar .author__urls li a span {
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .sidebar,
+  .sidebar.sticky {
+    transition: opacity 0.3s ease-in-out !important;
+  }
+  
+  .sidebar:hover,
+  .sidebar.sticky:hover {
+    opacity: 0.90 !important;
+  }
+  
+  /* EXCEPTION: Profile picture stays at FULL brightness (no filter inheritance) */
+  .sidebar:hover .author__avatar,
+  .sidebar:hover .author__avatar-img,
+  .sidebar:hover .author__avatar .author__avatar-img,
+  .sidebar.sticky:hover .author__avatar,
+  .sidebar.sticky:hover .author__avatar-img,
+  .sidebar.sticky:hover .author__avatar .author__avatar-img,
+  .sidebar:hover .author__avatar img,
+  .sidebar.sticky:hover .author__avatar img {
+    opacity: 1 !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+  }
+}
+
+/* Hover: Minimal icon scale (footer style) — no large background box */
+.author__urls li a:hover {
+  color: #0a66c2 !important;
+  background-color: transparent !important;
+}
+.author__urls li a:hover i {
+  transform: scale(1.15) !important;
+}
+html.dark-mode .author__urls li a { color: var(--text) !important; }
+html.dark-mode .author__urls li a:hover {
+  color: var(--link-hover) !important;
+  background-color: transparent !important;
+}
+html.dark-mode .author__urls li a:hover i {
+  transform: scale(1.15) !important;
+}
+
+/* Profile picture: grey border on hover to signal interactivity */
+.author__avatar:hover .author__avatar-img,
+.author__avatar .author__avatar-img:hover {
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, #aaa 0%, #ccc 50%, #aaa 100%) border-box !important;
+  transition: background 0.25s ease !important;
+}
+
+/* ── Sidebar social icons — individual brand colors (light mode) ── */
+.author__urls .fa-researchgate   { color: #00a896; }
+.author__urls .fa-graduation-cap { color: #4285f4; }
+.author__urls .fa-linkedin       { color: #0a66c2; }
+.author__urls .fa-github         { color: #24292e; }
+.author__urls .fa-orcid          { color: #a6ce39; }
+.author__urls .fa-twitter-square { color: #1da1f2; }
+.author__urls .fa-envelope-square{ color: #ea4335; }
+.author__urls .fa-location-dot   { color: #888; }
+
+/* ================================================================
+   Mobile & Tablet: Center-align sidebar (left-align only on desktop)
+   ================================================================ */
+
+/* Mobile: center-align sidebar text, but left-align social icons */
+@media (max-width: 1024px) {
+  /* Center the sidebar container on all pages */
+  .sidebar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: auto !important;
+  }
+
+  /* For non-blog pages: center the sidebar within its parent */
+  .page__inner-wrap .sidebar {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Profile image - perfectly centered */
+  .author__avatar {
+    display: block !important;
+    text-align: center !important;
+    margin: 0 auto 0.65em !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .author__avatar img,
+  .author__avatar-img {
+    display: inline-block !important;
+    margin: 0 auto !important;
+  }
+
+  /* Name, title, affiliation - all centered */
+  .author__content {
+    text-align: center !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .author__name {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .author__bio {
+    text-align: center !important;
+    margin: 0 0 0.6em !important;
+  }
+
+  /* Follow button wrapper and details element - stacked vertically */
+  .author__urls-wrapper {
+    width: auto !important;
+    margin: 0.4em auto !important;
+    display: block !important;
+  }
+
+  /* Details element acts as a block container */
+  .author__urls-details {
+    display: block !important;
+    text-align: center !important;
+  }
+
+  /* Details element */
+  .author__urls-details {
+    overflow: visible !important;
+  }
+
+  /* On mobile/tablet: hide social icons by default (closed state) */
+  .author__urls-details:not([open]) .author__urls {
+    display: none !important;
+  }
+
+  /* On mobile/tablet: show social icons when details is open with smooth animation */
+  .author__urls-details[open] .author__urls {
+    display: flex !important;
+    animation: slideDown 0.3s ease-out forwards !important;
+    margin-top: 0.8em !important;
+  }
+
+  /* Follow button - centered and consistent sizing */
+  .author__follow-btn {
+    margin: 0 !important;
+    display: block !important;
+    width: auto !important;
+  }
+
+  /* Social icons list - left-aligned, appears below button */
+  .author__urls {
+    text-align: left !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    margin: 0 auto !important;
+    width: fit-content !important;
+    list-style: none !important;
+    padding: 0 !important;
+  }
+
+  .author__urls li {
+    margin: 0 !important;
+    width: fit-content !important;
+  }
+
+  .author__urls li a {
+    justify-content: flex-start !important;
+  }
+}
+
+
+
+/* ================================================================
+   RIGHT sidebar TOC
+   Desktop: MM's own @supports(position:sticky) handles it — no override needed.
+   Tablet/phone: force static so it flows inline (no sticky).
+   ================================================================ */
+.sidebar__right { font-family: "Ubuntu", sans-serif; }
+
+/* Tablet + phone only: disable sticky, flow inline */
+@media (max-width: 1024px) {
+  aside.sidebar__right,
+  .sidebar__right {
+    position: static !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+}
+
+
+
+/* Desktop: Hide Follow button, always show social icons */
+@media (min-width: 1025px) {
+  .author__urls-wrapper {
+    text-align: left !important;
+  }
+
+  /* Hide only the Follow button on desktop */
+  .author__follow-btn {
+    display: none !important;
+  }
+
+  /* Desktop: Social icons ALWAYS visible, regardless of open/closed state */
+  .author__urls-details .author__urls {
+    display: block !important;
+  }
+
+  .author__urls-details[open] .author__urls {
+    display: block !important;
+  }
+}
+
+
+
+/* TOC box — with border in both light and dark mode */
+.toc {
+  font-family: "Ubuntu", sans-serif;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.toc .nav__title { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.06em; }
+.toc__menu a { font-size: 1.00em; line-height: 1.45; }
+
+/* ================================================================
+   Blog page — CSS Grid 3-column layout
+   ================================================================ */
+.blog-layout {
+  display: grid !important;
+  grid-template-columns: 240px 1fr 180px;
+  gap: 0 1.5em;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 1rem;
+  align-items: start !important;
+  box-sizing: border-box;
+}
+
+/* Left column — author profile (sticky only on desktop) */
+.blog-col-left {
+  max-width: 240px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1025px) {
+  .blog-col-left.sticky {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 2em !important;
+    max-height: calc(100vh - 4em) !important;
+    display: block !important;
+    float: none !important;
+    z-index: 10;
+  }
+}
+
+/* Constrain all children (h-card, sidebar) inside the left column - DESKTOP ONLY */
+@media (min-width: 1025px) {
+  .blog-col-left .sidebar,
+  .blog-col-left .h-card,
+  .blog-col-left .author__avatar,
+  .blog-col-left .author__content,
+  .blog-col-left .author__urls-wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Center column — posts */
+.blog-col-center {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-left: 0;
+}
+
+/* Right column — nav sidebar (sticky) */
+.blog-col-right {
+  font-family: "Ubuntu", sans-serif;
+  padding-left: 1em;   /* breathing room between center posts and right sidebar */
+  max-width: 180px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Sidebar browse list — matches MM `_navigation.scss` structure; slightly smaller type */
+.blog-col-right .nav__list .nav__items {
+  font-size: 0.9rem;
+}
+
+.blog-nav-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 2em !important;
+  max-height: calc(100vh - 4em) !important;
+  overflow-y: auto !important;
+  z-index: 10;
+}
+/* Below 1280px: drop right sidebar, 2-column layout */
+@media (max-width: 1279px) {
+  .blog-layout {
+    grid-template-columns: 185px 1fr !important;
+    gap: 0 1.5em;
+  }
+  .blog-col-left { max-width: 185px; }
+  .blog-col-right { display: none; }
+}
+
+/* Below 1024px: single column (tablets, small laptops, phones) */
+@media (max-width: 1024px) {
+  .blog-layout {
+    grid-template-columns: 1fr !important;
+    gap: 1em;
+  }
+  .blog-col-left {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .blog-col-center {
+    margin-left: 0;
+  }
+  .blog-col-right { display: none; }
+}
+
+/* Wide screens — more room for sidebars */
+@media (min-width: 1400px) {
+  .blog-layout { grid-template-columns: 220px 1fr 180px; }
+}
+
+/* Override MM nav_list default styles — make them compact */
+.blog-col-right .nav__title,
+.blog-col-right h4.nav__title {
+  font-size: 0.65em !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.09em !important;
+  color: #666 !important;
+  background: none !important;
+  padding: 0 0 0.3em !important;
+  margin: 0.9em 0 0.3em !important;
+  border-bottom: 1px solid #ddd !important;
+}
+.blog-col-right .nav__title:first-child,
+.blog-col-right h4.nav__title:first-child { margin-top: 0 !important; }
+
+/* Nav links */
+.blog-col-right .nav__items,
+.blog-col-right ul { list-style: none; margin: 0; padding: 0; }
+
+.blog-col-right .nav__items li,
+.blog-col-right ul li {
+  padding: 2px 0;
+  line-height: 1.35;
+}
+
+.blog-col-right .nav__items a,
+.blog-col-right ul li a {
+  font-size: 0.78em !important;
+  display: block;
+  text-decoration: none;
+  color: #444;
+  word-break: break-word;     /* prevents long tags from overflowing */
+  overflow-wrap: break-word;
+  hyphens: auto;
+  padding: 1px 0;
+}
+.blog-col-right .nav__items a:hover,
+.blog-col-right ul li a:hover {
+  color: #0a66c2;
+  text-decoration: underline;
+}
+
+/* Active link */
+.blog-col-right .nav__items a.active { font-weight: 600; color: #0a66c2; }
+
+/* Mobile/tablet blog right sidebar hidden via grid rules above */
+
+/* Dark mode blog right column */
+html.dark-mode .blog-col-right .nav__title,
+html.dark-mode .blog-col-right h4.nav__title {
+  color: var(--muted) !important;
+  border-color: var(--border) !important;
+}
+html.dark-mode .blog-col-right .nav__items a,
+html.dark-mode .blog-col-right ul li a { color: var(--link); }
+html.dark-mode .blog-col-right .nav__items a:hover,
+html.dark-mode .blog-col-right ul li a:hover { color: var(--link-hover); }
+
+/* ================================================================
+   News table
+   ================================================================ */
+.news-table {
+  font-size: 0.9em; width: 100%; border-collapse: collapse; margin: 0.5em 0 1em;
+}
+.news-table td { padding: 0.45em 0.6em; border-bottom: 1px solid #ebebeb; vertical-align: top; }
+.news-table .news-date { white-space: nowrap; width: 7em; color: #555; font-weight: 600; }
+.news-table tr:last-child td { border-bottom: none; }
+#news-toggle { margin: 0.6em 0 1em; font-size: 0.875em; }
+/* Homepage collaboration box + recent news descriptions */
+.page__content .notice--warning {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.news-table td:not(.news-date) {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Publications page (jekyll-scholar) */
+.page__content ol.bibliography > li {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* ================================================================
+   General tables
+   ================================================================ */
+table { font-size: 0.9em; width: 100%; border-collapse: collapse; }
+th { background-color: #f5f5f5; font-weight: 600; }
+td, th { padding: 0.45em 0.75em; border: 1px solid #e5e5e5; text-align: left; }
+tr:nth-child(even) { background-color: #fafafa; }
+
+/* ================================================================
+   Code blocks + copy button
+   ================================================================ */
+div.highlighter-rouge, figure.highlight {
+  position: relative; margin: 1em 0; border-radius: 4px; overflow: hidden;
+}
+.highlight pre { font-size: 0.85em; padding: 1em; overflow-x: auto; }
+
+.copy-code-btn {
+  position: absolute; top: 6px; right: 8px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px; padding: 2px 8px; font-size: 0.7em;
+  cursor: pointer; font-family: "Ubuntu", sans-serif; z-index: 10;
+  transition: background 0.2s;
+}
+.copy-code-btn:hover  { background: rgba(255,255,255,0.3); }
+.copy-code-btn.copied { background: #2e7d32; border-color: #2e7d32; }
+
+/* ================================================================
+   Page content
+   ================================================================ */
+.page__content { font-family: "Ubuntu", sans-serif; font-size: 1em; line-height: 1.7; text-align: justify;}
+.page__content h1 { font-size: 1.5em;  margin-top: 1.5em; }
+.page__content h2 { font-size: 1.25em; margin-top: 1.4em; }
+.page__content h3 { font-size: 1.05em; margin-top: 1.2em; }
+.page__content h4 { font-size: 0.9em;  margin-top: 1em; }
+.page__title { font-family: "Ubuntu", sans-serif; font-size: 1.5em; font-weight: 700; }
+
+/* ================================================================
+   Social SHARE buttons — brand colors + brightness hover (no lift)
+   ================================================================ */
+.btn--x, .btn--twitter, .btn--facebook, .btn--linkedin, .btn--bluesky {
+  transition: filter 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+.btn--x {
+  background-color: #000 !important; border-color: #000 !important; color: #fff !important;
+}
+.btn--x:hover {
+  filter: brightness(1.35) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.45) !important;
+}
+
+.btn--facebook {
+  background-color: #1877f2 !important; border-color: #1877f2 !important; color: #fff !important;
+}
+.btn--facebook:hover {
+  filter: brightness(1.15) !important;
+  box-shadow: 0 2px 10px rgba(24,119,242,0.5) !important;
+}
+
+.btn--linkedin {
+  background-color: #0a66c2 !important; border-color: #0a66c2 !important; color: #fff !important;
+}
+.btn--linkedin:hover {
+  filter: brightness(1.18) !important;
+  box-shadow: 0 2px 10px rgba(10,102,194,0.5) !important;
+}
+
+.btn--bluesky {
+  background-color: #0085ff !important; border-color: #0085ff !important; color: #fff !important;
+}
+.btn--bluesky:hover {
+  filter: brightness(1.15) !important;
+  box-shadow: 0 2px 10px rgba(0,133,255,0.5) !important;
+}
+
+.btn--twitter {
+  background-color: #1da1f2 !important; border-color: #1da1f2 !important; color: #fff !important;
+}
+.btn--twitter:hover {
+  filter: brightness(1.15) !important;
+  box-shadow: 0 2px 10px rgba(29,161,242,0.5) !important;
+}
+
+/* ================================================================
+   Footer
+   ================================================================ */
+.page__footer { font-family: "Ubuntu", sans-serif; font-size: 0.8em; }
+
+/* Footer follow link hover */
+.page__footer-follow a {
+  transition: opacity 0.15s;
+}
+.page__footer-follow a:hover { opacity: 0.75; }
+.page__footer-follow a:hover i { transform: scale(1.2); }
+.page__footer-follow i { transition: transform 0.15s; display: inline-block; }
+
+/* Footer icon brand colors */
+.page__footer-follow .fa-envelope-square { color: #ea4335; }
+.page__footer-follow .fa-twitter-square  { color: #1da1f2; }
+.page__footer-follow .fa-linkedin        { color: #0a66c2; }
+.page__footer-follow .fa-instagram       { color: #e1306c; }
+.page__footer-follow .fa-github          { color: #333; }
+.page__footer-follow .fa-graduation-cap  { color: #4285f4; }
+.page__footer-follow .fa-researchgate    { color: #00a896; }
+.page__footer-follow .fa-orcid           { color: #a6ce39; }
+.page__footer-follow .fa-square-rss      { color: #f26522; }
+.page__footer-follow .fa-sitemap         { color: #6c757d; }
+
+/* ================================================================
+   Tag cloud
+   ================================================================ */
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 0.4em; margin: 0.75em 0 1.2em; }
+.tag-cloud a {
+  display: inline-block; padding: 0.2em 0.65em;
+  border: 1px solid #ccc; border-radius: 20px;
+  font-size: 0.8em; text-decoration: none; color: #444;
+  transition: background 0.2s, color 0.2s;
+}
+.tag-cloud a:hover { background: #4a90e2; color: #fff; border-color: #4a90e2; }
+
+/* ================================================================
+   Buttons (general)
+   ================================================================ */
+.btn { font-family: "Ubuntu", sans-serif; font-size: 0.875em; }
+
+/* ================================================================
+   Responsive — full device coverage
+   ================================================================ */
+
+/* ── Tablet & phone: override MM's table-cell sidebar to block layout ──
+   MM uses display:table-cell for .author__avatar + .author__content below
+   1024px. With our larger photo (100px+) this crushes the text beside it.
+   Force block layout so photo stacks above text on ALL non-desktop sizes.
+*/
+@media (max-width: 1024px) {
+  #main { padding-left: 0.75rem; padding-right: 0.75rem; }
+
+  .author__avatar {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    text-align: left;
+    margin-top: 0.75em;
+    margin-bottom: 0.6em;
+    float: none !important;
+  }
+  .author__avatar-img {
+    width: 100px !important;
+    height: 100px !important;
+    max-width: 100px !important;
+    display: block;
+  }
+  .author__content {
+    display: block !important;
+    width: 100% !important;
+    padding-inline: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    clear: both;
+  }
+
+  /* Follow dropdown: static position + proper padding + hide stray triangle */
+  .author__urls-wrapper .author__urls {
+    position: static !important;
+    right: auto !important;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.14) !important;
+    border: 1px solid #d8d8d8 !important;
+    border-radius: 10px !important;
+    margin-top: 0.6em !important;
+    padding: 1em 1.1em !important;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+  /* Hide the absolute-positioned triangle arrows (designed for position:absolute dropdowns) */
+  .author__urls-wrapper .author__urls::before,
+  .author__urls-wrapper .author__urls::after {
+    display: none !important;
+  }
+  .author__urls.social-icons li { padding: 5px 5px; font-size: 1em; }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  body { font-size: 15px; }
+  #main { padding-left: 0.5rem; padding-right: 0.5rem; }
+  .masthead__inner-wrap { padding-left: 0.5rem; padding-right: 0.5rem; }
+  .site-title { font-size: 1.1em; }
+  .greedy-nav .visible-links a { font-size: 0.8em; }
+  .author__avatar-img { width: 90px !important; height: 90px !important; max-width: 90px !important; }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  .author__avatar-img { width: 80px !important; height: 80px !important; max-width: 80px !important; }
+  .author__pronunciation { font-size: 0.9em; }
+  .author__bio { font-size: 0.8em; }
+}
+
+/* Small phone */
+@media (max-width: 480px) {
+  body { font-size: 14px; }
+  .site-title { font-size: 1em; }
+  .author__avatar-img { width: 72px !important; height: 72px !important; max-width: 72px !important; }
+  .news-table .news-date { display: block; width: auto; color: #888; font-size: 0.85em; }
+}
+
+/* ================================================================
+   Justified text — all paragraphs on wide+mobile screens
+   ================================================================ */
+.page__content p {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+/* Don't justify very narrow screens (looks bad) */
+@media (max-width: 480px) {
+  .page__content .notice--warning { text-align: left; }
+  .news-table td:not(.news-date) { text-align: left; hyphens: none; -webkit-hyphens: none; }
+  .page__content ol.bibliography > li { text-align: left; hyphens: none; -webkit-hyphens: none; }
+}
+
+/* ================================================================
+   Mobile Follow dropdown — keep inside viewport (not off-screen left)
+   ================================================================ */
+@media (max-width: 1024px) {
+  .author__urls-wrapper .author__urls {
+    position: static !important;
+    right: auto !important;
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    margin-top: 0.5em !important;
+    padding: 0.4em 0.25em !important;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+}
+
+/* ================================================================
+   DARK MODE — zinc palette
+   ================================================================ */
+html.dark-mode {
+  --bg:        #18181b;
+  --surface:   #27272a;
+  --surface-2: #3f3f46;
+  --border:    #3f3f46;
+  --text:      #e4e4e7;
+  --muted:     #a1a1aa;
+  --link:      #60a5fa;
+  --link-hover:#93c5fd;
+  --nav-bg:    #18181b;
+  --code-bg:   #1e1e1e;
+  --accent:    #60a5fa;
+}
+
+/* Cover html + body + every MM wrapper so no white shows through on mobile */
+html.dark-mode,
+html.dark-mode body,
+html.dark-mode .initial-content,
+html.dark-mode .wrapper,
+html.dark-mode #main,
+html.dark-mode .page,
+html.dark-mode article.page,
+html.dark-mode .page__inner-wrap,
+html.dark-mode .page__content,
+html.dark-mode .page__hero,
+html.dark-mode .search-content { background-color: var(--bg) !important; }
+
+html.dark-mode body { color: var(--text); }
+
+/* Masthead */
+html.dark-mode .masthead,
+html.dark-mode .masthead__inner-wrap,
+html.dark-mode .greedy-nav { background-color: var(--nav-bg); border-color: var(--border); }
+html.dark-mode .greedy-nav a,
+html.dark-mode .site-title,
+html.dark-mode .theme-toggle { color: var(--text); }
+html.dark-mode .site-title--light { color: var(--muted); opacity: 1; }
+html.dark-mode .greedy-nav a:hover { color: var(--link); }
+html.dark-mode .greedy-nav__toggle { color: var(--text); }
+html.dark-mode .hidden-links {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+}
+html.dark-mode .hidden-links a { color: var(--text) !important; }
+html.dark-mode .hidden-links a:hover { color: var(--link) !important; }
+
+/* Follow dropdown dark mode — only on tablet/phone (desktop has no border box) */
+@media (max-width: 1024px) {
+  html.dark-mode .author__urls-wrapper .author__urls {
+    background-color: var(--surface) !important;
+    border-color: var(--border) !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4) !important;
+  }
+}
+
+/* Page content */
+html.dark-mode .page__content { color: var(--text); }
+html.dark-mode .page__content h1,
+html.dark-mode .page__content h2,
+html.dark-mode .page__content h3,
+html.dark-mode .page__content h4,
+html.dark-mode .page__title { color: #f4f4f5; }
+html.dark-mode a { color: var(--link); }
+html.dark-mode a:hover { color: var(--link-hover); }
+
+/* ── LEFT sidebar dark ── */
+
+html.dark-mode .blog-col-left .sidebar,
+html.dark-mode .sidebar:not(.blog-col-right *) {
+  background-color: transparent;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+html.dark-mode .author__avatar-img {
+  /* reset gradient and use solid dark border in dark mode */
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    linear-gradient(135deg, var(--accent) 0%, var(--border) 50%, var(--accent) 100%) border-box;
+  border-color: transparent;
+}
+html.dark-mode .author__pronunciation { color: #f4f4f5; }
+html.dark-mode .author__bio { color: var(--muted); }
+html.dark-mode .author__title { color: var(--text); }
+html.dark-mode .author__urls-wrapper { background-color: transparent; }
+html.dark-mode .author__urls-wrapper .btn--inverse {
+  background-color: var(--surface-2); border-color: var(--border); color: var(--text);
+}
+/* Social links text */
+html.dark-mode .author__urls li { color: var(--text); border-color: var(--border); }
+html.dark-mode .author__urls li a { color: var(--text); opacity: 1 !important; }
+html.dark-mode .author__urls li a:hover {
+  color: var(--link-hover);
+  background-color: rgba(96, 165, 250, 0.12); /* soft blue glow for dark mode */
+}
+
+/* Sidebar social icon brand colors (dark mode — slightly brighter for visibility) */
+html.dark-mode .author__urls .fa-researchgate   { color: #00ccbb !important; }
+html.dark-mode .author__urls .fa-graduation-cap { color: #5a9af7 !important; }
+html.dark-mode .author__urls .fa-linkedin       { color: #3b9dd2 !important; }
+html.dark-mode .author__urls .fa-github         { color: #e0e0e0 !important; }
+html.dark-mode .author__urls .fa-orcid          { color: #b8d94a !important; }
+html.dark-mode .author__urls .fa-twitter-square { color: #1da1f2 !important; }
+html.dark-mode .author__urls .fa-envelope-square{ color: #f06050 !important; }
+html.dark-mode .author__urls .fa-location-dot   { color: #a1a1aa !important; }
+
+/* ── RIGHT sidebar TOC dark ── */
+/* ── Right sidebar TOC dark mode ── */
+html.dark-mode .sidebar__right,
+html.dark-mode aside.sidebar__right {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+html.dark-mode .toc,
+html.dark-mode .sidebar__right .toc {
+  background-color: transparent !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  color: var(--text) !important;
+}
+html.dark-mode .toc .nav__title {
+  background-color: var(--surface-2) !important;
+  color: #f4f4f5 !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+html.dark-mode .toc__menu { background-color: transparent !important; }
+html.dark-mode .toc__menu a { color: var(--muted) !important; }
+html.dark-mode .toc__menu a:hover { color: var(--link) !important; }
+html.dark-mode .toc__menu .active > a,
+html.dark-mode .toc__menu li.active > a { color: var(--link) !important; font-weight: 600; }
+
+/* Tables */
+html.dark-mode th { background-color: var(--surface-2); color: var(--text); border-color: var(--border); }
+html.dark-mode td { color: var(--text); border-color: var(--border); }
+html.dark-mode tr:nth-child(even) { background-color: var(--surface); }
+html.dark-mode .news-table td { border-color: var(--border); }
+html.dark-mode .news-table .news-date { color: var(--muted); }
+
+/* Code */
+html.dark-mode code { background-color: var(--code-bg) !important; color: #93c5fd; }
+html.dark-mode pre  { background-color: var(--code-bg) !important; border-color: var(--border); }
+
+/* Blockquote */
+html.dark-mode blockquote {
+  border-left-color: var(--accent); color: var(--muted);
+  background-color: var(--surface); border-radius: 0 4px 4px 0;
+}
+
+/* Footer */
+html.dark-mode .page__footer { background-color: #111113; color: var(--muted); border-color: var(--border); }
+html.dark-mode .page__footer a { color: var(--link); }
+html.dark-mode .page__footer a:hover { color: var(--link-hover); }
+
+/* Footer icon brand colors in dark mode (same as light — they work on dark bg) */
+html.dark-mode .page__footer-follow .fa-github { color: #e0e0e0; }
+html.dark-mode .page__footer-follow .fa-instagram { color: #e1306c; }
+
+/* Notices */
+html.dark-mode .notice        { background-color: var(--surface); border-color: var(--border); color: var(--text); }
+html.dark-mode .notice--info  { background-color: #1e2a3a; border-color: #3b6ea0; color: #bfdbfe; }
+html.dark-mode .notice--success { background-color: #14291e; border-color: #276749; color: #86efac; }
+html.dark-mode .notice--warning { background-color: #2a1f0a; border-color: #7a5c1a; color: #fde68a; }
+html.dark-mode .notice--danger  { background-color: #2a1010; border-color: #7a2020; color: #fca5a5; }
+html.dark-mode .notice--primary { background-color: #1e2a3a; border-color: #3b6ea0; color: #bfdbfe; }
+
+/* Buttons */
+html.dark-mode .btn--primary { background-color: #2563eb; border-color: #3b82f6; color: #fff; }
+html.dark-mode .btn--primary:hover { background-color: #1d4ed8; }
+html.dark-mode .btn--inverse { background-color: var(--surface); border-color: var(--border); color: var(--text); }
+
+/* Tag cloud */
+html.dark-mode .tag-cloud a { border-color: var(--border); color: var(--muted); background-color: var(--surface); }
+html.dark-mode .tag-cloud a:hover { background: #2563eb; color: #fff; border-color: #3b82f6; }
+
+/* Search */
+html.dark-mode .search__toggle { color: var(--text); }
+html.dark-mode .search-content { background-color: var(--surface); }
+html.dark-mode .search-content .archive__item-title a { color: var(--text); }
+
+/* Share buttons keep brand colors in dark mode */
+html.dark-mode .btn--x         { background-color: #fff !important; border-color: #fff !important; color: #000 !important; }
+html.dark-mode .btn--x:hover   { filter: brightness(0.9) !important; }
+html.dark-mode .btn--facebook  { background-color: #1877f2 !important; border-color: #1877f2 !important; }
+html.dark-mode .btn--linkedin  { background-color: #0a66c2 !important; border-color: #0a66c2 !important; }
+html.dark-mode .btn--bluesky   { background-color: #0085ff !important; border-color: #0085ff !important; }
+
+/* ── Dark mode: ensure page body/article backgrounds are dark (mobile too) ── */
+html.dark-mode #main,
+html.dark-mode .page,
+html.dark-mode article.page,
+html.dark-mode .page__inner-wrap,
+html.dark-mode .page__content,
+html.dark-mode .initial-content {
+  background-color: var(--bg) !important;
+}
+/* Archive/blog index */
+html.dark-mode .list__item,
+html.dark-mode .archive { background-color: var(--bg) !important; color: var(--text); }
+html.dark-mode .archive__item-title a { color: var(--link); }
+html.dark-mode .archive__item-excerpt { color: var(--muted); }
+html.dark-mode .archive__item-excerpt { color: var(--muted); }
+
+/* Blog page font size of excerpt */
+.archive__item-excerpt {font-size: 1em;}
+
+/* Increase on tablet */
+@media (min-width: 600px) {
+    .archive__item-excerpt {
+        font-size: 1em;
+    }
+}
+
+/* Increase on desktop */
+@media (min-width: 1025px) {
+    .archive__item-excerpt {
+        font-size: 1em;
+    }
+}
+
+/* ── Hide blank/empty right TOC sidebar ── */
+/* When .toc__menu has no li items, hide the whole aside */
+.sidebar__right .toc .toc__menu:empty,
+.sidebar__right .toc:has(.toc__menu:empty),
+.sidebar__right:has(.toc__menu:empty) {
+  display: none !important;
+}
+/* Fallback: zero out padding/margin on empty mobile TOC */
+@media (max-width: 1024px) {
+  .sidebar__right .toc { margin-top: 0; margin-bottom: 0; }
+}
+
+/* ================================================================
+   Blog page nav list — reduce font size for compact sidebar items
+   (fix identified via browser inspect element on blog page)
+   ================================================================ */
+.nav__list .nav__items {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,52 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Biography"
+    url: /biography/
+  - title: "Research"
+    url: /research/
+  - title: "Publications"
+    url: /publications/
+  - title: "Teaching"
+    url: /teaching/
+  - title: "Gallery"
+    url: /gallery/
+  - title: "Blog"
+    url: /blog/
+  - title: "Contact"
+    url: /contact/
+
+# Blog sidebar — category navigation
+blog-categories:
+  - title: "Browse Posts"
+    children:
+      - title: "All Posts"
+        url: /blog/
+      - title: "By Category"
+        url: /categories/
+      - title: "By Tag"
+        url: /tags/
+
+  - title: "Categories"
+    children:
+      - title: "Research"
+        url: /categories/#research
+      - title: "Smart Grid"
+        url: /categories/#smart-grid
+      - title: "Demo"
+        url: /categories/#demo
+
+  - title: "Recent Tags"
+    children:
+      - title: "deep reinforcement learning"
+        url: /tags/#deep-reinforcement-learning
+      - title: "energy management"
+        url: /tags/#energy-management
+      - title: "code"
+        url: /tags/#code
+      - title: "video"
+        url: /tags/#video
+      - title: "flowchart"
+        url: /tags/#flowchart
+      - title: "images"
+        url: /tags/#images
