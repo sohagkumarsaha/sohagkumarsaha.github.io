@@ -53,16 +53,18 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: actions/deploy-pages@v4
       
-      - name: Checkout for staging deployment
+      - name: Download artifact for staging
         if: github.ref == 'refs/heads/staging'
-        uses: actions/checkout@v4
+        uses: actions/download-artifact@v3
         with:
-          ref: staging
-      
+          name: github-pages
+          path: ./staging-artifact
+
       - name: Deploy to staging preview
         if: github.ref == 'refs/heads/staging'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: ./staging-artifact
           publish_branch: gh-pages-staging
+          commit_message: '[skip ci] Deploy staging from GitHub Actions'
