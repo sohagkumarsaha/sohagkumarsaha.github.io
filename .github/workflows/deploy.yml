@@ -20,8 +20,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout main branch
         uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -29,26 +32,30 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-
-      - name: Build with Jekyll (main branch)
-        if: github.ref == 'refs/heads/main'
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - name: Build main site
+        working-directory: main
+        run: bundle exec jekyll build --baseurl ""
         env:
           JEKYLL_ENV: production
 
-      - name: Build with Jekyll (staging branch)
-        if: github.ref == 'refs/heads/staging'
+      - name: Checkout staging branch
+        uses: actions/checkout@v4
+        with:
+          ref: staging
+          path: staging
+
+      - name: Build staging site
+        working-directory: staging
+        run: bundle exec jekyll build --baseurl "/staging" --destination ../_site_staging
+        env:
+          JEKYLL_ENV: production
+
+      - name: Combine main and staging outputs
         run: |
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}/staging"
-          mkdir -p _site_final/staging
-          cp -r _site/* _site_final/staging/
-          rm -rf _site
-          mv _site_final _site
-        env:
-          JEKYLL_ENV: production
+          mkdir -p _site
+          cp -r main/_site/* _site/
+          mkdir -p _site/staging
+          cp -r _site_staging/* _site/staging/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
