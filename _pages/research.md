@@ -52,8 +52,8 @@ Developing a safe deep reinforcement learning-based energy management system for
 ### Intelligent Energy Management Systems using Controller Hardware-in-the-Loop with Deep Reinforcement Learning
 Real-time implementation of intelligent energy management systems using controller hardware-in-the-loop (CHIL) simulation with deep reinforcement learning algorithms in Typhoon HIL-Python co-simulation environment. Optimizes microgrid dispatch, demand response, and battery management through advanced control techniques.
 
-### Quantum-Enhanced Recurrent Neural Networks with Transfer Learning for Solar Irradiance Forecasting
-Hybrid quantum-classical approach combining quantum-enhanced recurrent neural networks with transfer learning techniques for accurate day-ahead solar irradiance forecasting, incorporating spatial-temporal information and meteorological constraints.
+### Quantum-Enhanced Recurrent Neural Networks with multi-head-self-attention based Tranformer Learning for Solar Irradiance Forecasting
+Hybrid quantum-classical approach combining quantum-enhanced recurrent neural networks with MHSA based transformer learning techniques for accurate day-ahead solar irradiance forecasting, incorporating spatial-temporal information and meteorological constraints.
 
 ---
 
