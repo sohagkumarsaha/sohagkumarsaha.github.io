@@ -157,6 +157,8 @@ In December 2024, he received his **Master of Science in ECE** from Tennessee Te
   <a href="{{ '/biography/' | relative_url }}" class="btn btn--primary">Full Biography &amp; News &rarr;</a>
   &nbsp;
   <a href="{{ '/publications/' | relative_url }}" class="btn btn--inverse">Publications &rarr;</a>
+  &nbsp;
+  <a href="{{ '/blog/' | relative_url }}" class="btn btn--inverse">Blog &rarr;</a>
 </p>
 
 ---
