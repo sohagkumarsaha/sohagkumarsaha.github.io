@@ -19,6 +19,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      artifact-id: ${{ steps.upload.outputs.artifact-id }}
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v4
@@ -30,7 +32,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: false
+          bundler-cache: true
 
       - name: Install gems (main)
         working-directory: main
@@ -79,6 +81,7 @@ jobs:
           echo "✓ Staging site deployed to: https://sohagkumarsaha.github.io/staging"
 
       - name: Upload artifact
+        id: upload
         uses: actions/upload-pages-artifact@v3
 
   deploy:
