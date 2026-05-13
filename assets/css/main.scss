@@ -527,6 +527,7 @@ html.dark-mode .author__urls li a:hover i {
   padding: 1em 1rem;
   align-items: start !important;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* Left column — author profile (sticky only on desktop) */
@@ -603,11 +604,21 @@ html.dark-mode .author__urls li a:hover i {
   .blog-col-right { display: none; }
 }
 
+/* Below 1200px: transition zone — adjust spacing */
+@media (max-width: 1200px) {
+  .blog-layout {
+    grid-template-columns: 160px 1fr !important;
+    gap: 0 1.2em;
+  }
+  .blog-col-left { max-width: 160px; }
+}
+
 /* Below 1024px: single column (tablets, small laptops, phones) */
 @media (max-width: 1024px) {
   .blog-layout {
     grid-template-columns: 1fr !important;
     gap: 1em;
+    padding: 0;
   }
   .blog-col-left {
     position: static;
@@ -616,11 +627,19 @@ html.dark-mode .author__urls li a:hover i {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    margin-bottom: 2rem;
   }
   .blog-col-center {
     margin-left: 0;
+    padding: 0 1rem;
   }
   .blog-col-right { display: none; }
+
+  /* Ensure main content doesn't overflow */
+  #main {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 
 /* Wide screens — more room for sidebars */
