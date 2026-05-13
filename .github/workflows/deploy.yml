@@ -30,9 +30,13 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: true
+          bundler-cache: false
 
-      - name: Build main site
+      - name: Install gems (main)
+        working-directory: main
+        run: bundle install
+
+      - name: Build main site (production)
         working-directory: main
         run: bundle exec jekyll build --baseurl ""
         env:
@@ -44,18 +48,24 @@ jobs:
           ref: staging
           path: staging
 
-      - name: Build staging site
+      - name: Install gems (staging)
+        working-directory: staging
+        run: bundle install
+
+      - name: Build staging site (preview)
         working-directory: staging
         run: bundle exec jekyll build --baseurl "/staging" --destination ../_site_staging
         env:
           JEKYLL_ENV: production
 
-      - name: Combine main and staging outputs
+      - name: Combine outputs (main + /staging)
         run: |
           mkdir -p _site
           cp -r main/_site/* _site/
           mkdir -p _site/staging
           cp -r _site_staging/* _site/staging/
+          echo "✓ Main site deployed to: https://sohagkumarsaha.github.io"
+          echo "✓ Staging site deployed to: https://sohagkumarsaha.github.io/staging"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
