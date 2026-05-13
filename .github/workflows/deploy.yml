@@ -60,10 +60,21 @@ jobs:
 
       - name: Combine outputs (main + /staging)
         run: |
+          echo "Building combined site structure..."
           mkdir -p _site
+          echo "Copying main site..."
           cp -r main/_site/* _site/
+          echo "Creating staging subdirectory..."
           mkdir -p _site/staging
-          cp -r _site_staging/* _site/staging/
+          echo "Copying staging site..."
+          if [ -d "_site_staging" ]; then
+            cp -r _site_staging/* _site/staging/
+            echo "✓ Staging site copied successfully"
+          else
+            echo "WARNING: _site_staging directory not found!"
+            ls -la
+            exit 1
+          fi
           echo "✓ Main site deployed to: https://sohagkumarsaha.github.io"
           echo "✓ Staging site deployed to: https://sohagkumarsaha.github.io/staging"
 
