@@ -41,7 +41,12 @@ jobs:
 
       - name: Build with Jekyll (staging branch)
         if: github.ref == 'refs/heads/staging'
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}/staging" --destination ./_site/staging
+        run: |
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}/staging"
+          mkdir -p _site_final/staging
+          cp -r _site/* _site_final/staging/
+          rm -rf _site
+          mv _site_final _site
         env:
           JEKYLL_ENV: production
 
