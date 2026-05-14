@@ -169,7 +169,7 @@ In December 2024, he received his **Master of Science in ECE** from Tennessee Te
 
 ---
 
-## Visitors Counter
+## Visitors Map and Stats
 
 <div style="text-align: center; margin: 2em 0;">
   <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=a&t=m&d=ywJq6xbQTE7qGP51jvhZVo40N-Ri-H-ooaOLHxfg1nA'></script>
