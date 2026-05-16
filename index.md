@@ -23,7 +23,7 @@ In December 2024, he received his **Master of Science in ECE** from Tennessee Te
     <!-- ── Always visible: top 5 ── -->
     <tr>
       <td class="news-date"><strong>May 2026</strong></td>
-      <td>Our paper on <em>"Meta-DQN-Tuned Safe Deep Reinforcement Learning-based Energy Management System for a Community Microgrid"</em> is <strong>accepted</strong> for presentation and publication at the <strong>2026 61st IEEE Industry Applications Society Annual Meeting</strong>, Vancouver, Canada, October 2026.</td>
+      <td>Our paper on <em>"Meta-DQN Tuned TD3-based Safety-Aware Deep Reinforcement Learning for Energy Management System in Community Microgrids"</em> is <strong>accepted</strong> for presentation and publication at the <strong>2026 61st IEEE Industry Applications Society Annual Meeting</strong>, Vancouver, Canada, October 2026.</td>
     </tr>
     <tr>
       <td class="news-date"><strong>Jan 2026</strong></td>
