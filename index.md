@@ -3,14 +3,14 @@ layout: single
 author_profile: true
 ---
 
-Sohag Kumar Saha is a Graduate Research Assistant at the [Smart Grid Lab](https://www.tntech.edu/cesr/){:target="_blank"}, Center for Energy Systems Research (CESR), [Tennessee Technological University](https://www.tntech.edu/){:target="_blank"}, Cookeville, TN, USA. He is pursuing his **Ph.D. in Engineering** with a focus on Power Systems and Energy.
+Sohag Kumar Saha is a Graduate Research Assistant at the [Smart Grid Lab](https://www.tntech.edu/cesr/){:target="\_blank"}, Center for Energy Systems Research (CESR), [Tennessee Technological University](https://www.tntech.edu/){:target="\_blank"}, Cookeville, TN, USA. He is pursuing his **Ph.D. in Electrical Engineering** with a focus on Power Systems, Energy and Control of Microgrids.
 
 His research focuses on **Energy Management Systems**, **Adaptive Critic Design**, **Controller Hardware-in-the-Loop (CHIL) Simulation**, **Smart Grid** and Microgrid Systems, Integration of Renewable Energy, Battery Energy Storage Systems (BESS), PV Hosting Capacity, Peak Shaving, Economic Load Dispatch, Optimization using Meta-heuristic Algorithms, and application of **Machine Learning** and **Deep Reinforcement Learning** in Power Systems.
 
 In December 2024, he received his **Master of Science in ECE** from Tennessee Tech. Earlier, he completed his **B.Sc. in EEE** from Pabna University of Science & Technology (PUST), Bangladesh. He was elevated to **IEEE Senior Member** grade in August 2025, a distinction held by only ~10% of IEEE's nearly half-million members.
 
 <div class="notice--warning">
-<strong>Open to Collaboration and Full-time Job Opportunities in Power Systems and Energy:</strong> Actively seeking full-time research and industry R&amp;D opportunities from <strong>Fall 2026</strong> in the areas of Power Systems, Energy, and Control Engineering. Research and professional interests include intelligent energy management systems, power system modeling and analysis, renewable energy integration, microgrid control and protection, substation automation, and controller-/hardware-in-the-loop (C-HIL/HIL) validation using Typhoon HIL, RTAC platforms, inverter controllers, and physical protection relays. Open to collaborations and interdisciplinary projects bridging advanced control, AI/ML, and modern power and energy systems. <a href="{{ '/contact/' | relative_url }}">Get in touch &rarr;</a>
+<strong>Open to Full-time Job Opportunities in Power Systems and Energy Domain:</strong> Actively seeking full-time research and industry R&amp;D opportunities after finishing <strong>Fall-2026</strong> semester, in the areas of Power Systems, Energy, and Control systems. Research and professional interests include intelligent energy management systems, power system modeling and analysis, renewable energy integration, microgrid control and protection, substation automation, and controller-/hardware-in-the-loop (C-HIL/HIL) validation using Typhoon HIL, RTAC platforms, inverter controllers, and physical protection relays. Open to collaborations and interdisciplinary projects bridging advanced control, AI/ML, and modern power and energy systems. <a href="{{ '/contact/' | relative_url }}">Get in touch &rarr;</a>
 </div>
 
 ---
