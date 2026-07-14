@@ -31,7 +31,7 @@ Power Systems Engineer with 10+ years of experience spanning grid operation and 
 
 ## Employment Authorization
 
-Legally authorized to work in the United States as a U.S. Lawful Permanent Resident; no employer sponsorship required.
+Legally authorized to work in the United States as a U.S. Lawful Permanent Resident (LPR); no employer sponsorship required.
 
 ---
 
