@@ -707,22 +707,100 @@ html.dark-mode .blog-col-right .nav__items a:hover,
 html.dark-mode .blog-col-right ul li a:hover { color: var(--link-hover); }
 
 /* ================================================================
-   News table
+   News timeline
    ================================================================ */
-.news-table {
-  font-size: 0.9em; width: 100%; border-collapse: collapse; margin: 0.5em 0 1em;
+.timeline {
+  position: relative;
+  margin: 0.75em 0 1.2em;
+  padding-left: 2.1em;
+  font-size: 0.9em;
 }
-.news-table td { padding: 0.45em 0.6em; border-bottom: 1px solid #ebebeb; vertical-align: top; }
-.news-table .news-date { white-space: nowrap; width: 7em; color: #555; font-weight: 600; }
-.news-table tr:last-child td { border-bottom: none; }
-#news-toggle { margin: 0.6em 0 1em; font-size: 0.875em; }
-/* Homepage collaboration box + recent news descriptions */
-.page__content .notice--warning {
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5em;
+  top: 0.3em;
+  bottom: 0.3em;
+  width: 2px;
+  background: linear-gradient(to bottom, #4a90e2, #cfe0f5 88%, transparent);
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 1.5em 0.7em;
+}
+.timeline-item:last-of-type,
+.timeline-item.timeline-extra:last-child {
+  padding-bottom: 0;
+}
+.timeline-dot {
+  position: absolute;
+  left: -2.1em;
+  top: 0.25em;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #4a90e2;
+  box-shadow: 0 0 0 3px #eef4fc;
+}
+.timeline-item.is-latest .timeline-dot {
+  background: #4a90e2;
+  box-shadow: 0 0 0 4px #d6e6fb;
+}
+.timeline-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-weight: 700;
+  color: #2c5282;
+  background: #eef4fc;
+  border: 1px solid #cfe0f5;
+  border-radius: 5px;
+  padding: 0.15em 0.7em;
+  font-size: 0.82em;
+  margin-bottom: 0.4em;
+}
+.timeline-badge {
+  font-weight: 600;
+  font-size: 0.85em;
+  color: #fff;
+  background: #4a90e2;
+  border-radius: 8px;
+  padding: 0.1em 0.5em;
+  letter-spacing: 0.02em;
+}
+.timeline-text {
   text-align: justify;
   -webkit-hyphens: auto;
   hyphens: auto;
+  line-height: 1.55;
 }
-.news-table td:not(.news-date) {
+#news-toggle { margin: 0.6em 0 1em; font-size: 0.875em; }
+
+html.dark-mode .timeline::before {
+  background: linear-gradient(to bottom, var(--accent), var(--border) 88%, transparent);
+}
+html.dark-mode .timeline-dot {
+  background: var(--surface);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15);
+}
+html.dark-mode .timeline-item.is-latest .timeline-dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.25);
+}
+html.dark-mode .timeline-date {
+  color: var(--muted);
+  background: var(--surface);
+  border-color: var(--border);
+}
+html.dark-mode .timeline-badge {
+  background: var(--accent);
+  color: #0b1220;
+}
+
+/* Homepage collaboration box */
+.page__content .notice--warning {
   text-align: justify;
   -webkit-hyphens: auto;
   hyphens: auto;
@@ -954,7 +1032,9 @@ html.dark-mode .interest-tags span {
   body { font-size: 14px; }
   .site-title { font-size: 1em; }
   .author__avatar-img { width: 72px !important; height: 72px !important; max-width: 72px !important; }
-  .news-table .news-date { display: block; width: auto; color: #888; font-size: 0.85em; }
+  .timeline { padding-left: 1.7em; font-size: 0.85em; }
+  .timeline-item { padding-left: 0.5em; }
+  .timeline-dot { left: -1.7em; }
 }
 
 /* ================================================================
@@ -968,7 +1048,7 @@ html.dark-mode .interest-tags span {
 /* Don't justify very narrow screens (looks bad) */
 @media (max-width: 480px) {
   .page__content .notice--warning { text-align: left; }
-  .news-table td:not(.news-date) { text-align: left; hyphens: none; -webkit-hyphens: none; }
+  .timeline-text { text-align: left; hyphens: none; -webkit-hyphens: none; }
   .page__content ol.bibliography > li { text-align: left; hyphens: none; -webkit-hyphens: none; }
 }
 
@@ -1129,8 +1209,6 @@ html.dark-mode .toc__menu li.active > a { color: var(--link) !important; font-we
 html.dark-mode th { background-color: var(--surface-2); color: var(--text); border-color: var(--border); }
 html.dark-mode td { color: var(--text); border-color: var(--border); }
 html.dark-mode tr:nth-child(even) { background-color: var(--surface); }
-html.dark-mode .news-table td { border-color: var(--border); }
-html.dark-mode .news-table .news-date { color: var(--muted); }
 
 /* Code */
 html.dark-mode code { background-color: var(--code-bg) !important; color: #93c5fd; }
