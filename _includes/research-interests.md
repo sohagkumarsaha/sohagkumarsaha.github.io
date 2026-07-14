@@ -7,7 +7,7 @@
   <span>Battery Energy Storage Systems</span>
   <span>Controller Hardware-in-the-Loop Simulation</span>
   <span>Power System Operation & Planning</span>
+  <span>Power System Protection and Control</span>
   <span>ML, RL and DRL in Power Systems</span>
   <span>Mathematical and Metaheuristic Optimization</span>
-  <span>Power System Protection and Control</span>
 </div>
