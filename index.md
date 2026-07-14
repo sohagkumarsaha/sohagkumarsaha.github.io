@@ -22,6 +22,10 @@ In December 2024, he received his **Master of Science in ECE** from Tennessee Te
 
     <!-- ── Always visible: top 5 ── -->
     <tr>
+      <td class="news-date"><strong>July 2026</strong></td>
+      <td>After a long immigration journey, I am delighted to share that I have officially become a <strong>U.S. Lawful Permanent Resident</strong>. I am grateful to everyone who supported me throughout this process and look forward to the next chapter of my research and professional career.</td>
+    </tr>
+    <tr>
       <td class="news-date"><strong>May 2026</strong></td>
       <td>Our paper on <em>"Meta-DQN Tuned TD3-based Safety-Aware Deep Reinforcement Learning for Energy Management System in Community Microgrids"</em> is <strong>accepted</strong> for presentation and publication at the <strong>2026 61st IEEE Industry Applications Society Annual Meeting</strong>, Vancouver, Canada, October 2026.</td>
     </tr>
