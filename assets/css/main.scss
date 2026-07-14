@@ -858,6 +858,20 @@ div.highlighter-rouge, figure.highlight {
 .tag-cloud a:hover { background: #4a90e2; color: #fff; border-color: #4a90e2; }
 
 /* ================================================================
+   Research interest tags
+   ================================================================ */
+.interest-tags { display: flex; flex-wrap: wrap; gap: 0.5em; margin: 0.75em 0 1.2em; }
+.interest-tags span {
+  display: inline-block; padding: 0.35em 0.9em;
+  border: 1px solid #cfe0f5; border-radius: 20px;
+  background: #eef4fc; color: #2c5282;
+  font-size: 0.88em; font-weight: 500;
+}
+html.dark-mode .interest-tags span {
+  border-color: var(--border); color: var(--muted); background-color: var(--surface);
+}
+
+/* ================================================================
    Buttons (general)
    ================================================================ */
 .btn { font-family: "Ubuntu", sans-serif; font-size: 0.875em; }
