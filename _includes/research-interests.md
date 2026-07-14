@@ -6,9 +6,7 @@
   <span>Renewable Energy Integration</span>
   <span>Battery Energy Storage Systems</span>
   <span>Controller Hardware-in-the-Loop Simulation</span>
-  <span>Deep Learning in Power Systems</span>
-  <span>Reinforcement Learning and Deep RL</span>
-  <span>Metaheuristic Optimization</span>
-  <span>Cybersecurity in Smart Grids</span>
+  <span>ML, RL and DRL in Power Systems Application</span>
+  <span>Classical, Mathematical and Metaheuristic Optimization</span>
   <span>Power System Protection and Control</span>
 </div>
