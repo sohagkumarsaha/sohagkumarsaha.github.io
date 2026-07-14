@@ -31,7 +31,7 @@ Power Systems Engineer with 10+ years of experience spanning grid operation and 
 
 ## Employment Authorization
 
-Legally authorized to work in the United States as employment authorization  or EAD card with 5-year of validity approved in June, 2025 under submitted I485 (Adjustment of Status--AOS) based on approved I-140 petition in the EB2-NIW category.
+Legally authorized to work in the United States as a U.S. Lawful Permanent Resident; no employer sponsorship required.
 
 ---
 
