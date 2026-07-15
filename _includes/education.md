@@ -1,6 +1,6 @@
 <div class="timeline timeline--edu">
   <div class="timeline-item is-latest">
-    <span class="timeline-dot">1</span>
+    <span class="timeline-dot"></span>
     <img class="timeline-logo" src="{{ '/assets/images/logos/tntech.png' | relative_url }}" alt="Tennessee Tech logo">
     <div class="timeline-body">
       <div class="timeline-date">2021 – Present <span class="timeline-badge">In Progress</span></div>
@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="timeline-item">
-    <span class="timeline-dot">2</span>
+    <span class="timeline-dot"></span>
     <img class="timeline-logo" src="{{ '/assets/images/logos/tntech.png' | relative_url }}" alt="Tennessee Tech logo">
     <div class="timeline-body">
       <div class="timeline-date">2021 – 2024</div>
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="timeline-item">
-    <span class="timeline-dot">3</span>
+    <span class="timeline-dot"></span>
     <img class="timeline-logo" src="{{ '/assets/images/logos/pust.png' | relative_url }}" alt="Pabna University of Science & Technology logo">
     <div class="timeline-body">
       <div class="timeline-date">2009 – 2013</div>
@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="timeline-item">
-    <span class="timeline-dot">4</span>
+    <span class="timeline-dot"></span>
     <img class="timeline-logo" src="{{ '/assets/images/logos/deb-college.png' | relative_url }}" alt="Government Debendra College logo">
     <div class="timeline-body">
       <div class="timeline-date">2006 – 2008</div>
@@ -32,7 +32,7 @@
     </div>
   </div>
   <div class="timeline-item">
-    <span class="timeline-dot">5</span>
+    <span class="timeline-dot"></span>
     <img class="timeline-logo" src="{{ '/assets/images/logos/batila-school.jpg' | relative_url }}" alt="Batila High School logo">
     <div class="timeline-body">
       <div class="timeline-date">2001 – 2006</div>

@@ -1,6 +1,6 @@
 <div class="timeline timeline--edu">
   <div class="timeline-item is-latest">
-    <span class="timeline-dot">1</span>
+    <span class="timeline-dot"></span>
     <img class="timeline-logo" src="{{ '/assets/images/logos/tntech.png' | relative_url }}" alt="Tennessee Tech logo">
     <div class="timeline-body">
       <div class="timeline-date">2021 – Present <span class="timeline-badge">Current</span></div>
@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="timeline-item">
-    <span class="timeline-dot">2</span>
+    <span class="timeline-dot"></span>
     <img class="timeline-logo" src="{{ '/assets/images/logos/tntech.png' | relative_url }}" alt="Tennessee Tech logo">
     <div class="timeline-body">
       <div class="timeline-date">2022 – 2023</div>
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="timeline-item">
-    <span class="timeline-dot">3</span>
+    <span class="timeline-dot"></span>
     <img class="timeline-logo" src="{{ '/assets/images/logos/apscl.png' | relative_url }}" alt="Ashuganj Power Station Company Ltd. logo">
     <div class="timeline-body">
       <div class="timeline-date">2020 – 2021</div>
@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="timeline-item">
-    <span class="timeline-dot">4</span>
+    <span class="timeline-dot"></span>
     <img class="timeline-logo" src="{{ '/assets/images/logos/apscl.png' | relative_url }}" alt="Ashuganj Power Station Company Ltd. logo">
     <div class="timeline-body">
       <div class="timeline-date">2016 – 2020</div>
@@ -32,7 +32,7 @@
     </div>
   </div>
   <div class="timeline-item">
-    <span class="timeline-dot">5</span>
+    <span class="timeline-dot"></span>
     <img class="timeline-logo" src="{{ '/assets/images/logos/breb.png' | relative_url }}" alt="Bangladesh Rural Electrification Board logo">
     <div class="timeline-body">
       <div class="timeline-date">2015 – 2016</div>
@@ -40,7 +40,7 @@
     </div>
   </div>
   <div class="timeline-item">
-    <span class="timeline-dot">6</span>
+    <span class="timeline-dot"></span>
     <img class="timeline-logo" src="{{ '/assets/images/logos/cloud-tech-bd.jpg' | relative_url }}" alt="Cloud Technology BD logo">
     <div class="timeline-body">
       <div class="timeline-date">2013 – 2015</div>
