@@ -49,15 +49,7 @@ Legally authorized to work in the United States as a U.S. Lawful Permanent Resid
 
 ## Professional Experiences
 
-
-| Duration | Position | Organization |
-|----------|----------|--------------|
-| 2021–Present | Graduate Research Assistant | Tennessee Tech University, TN, USA |
-| 2022–2023 | Graduate Teaching Assistant/Instructor | Tennessee Tech University, TN, USA |
-| 2020–2021 | Sub-Divisional Engineer (Electrical) | Ashuganj Power Station Company Ltd. (APSCL), B.Baria, Bangladesh |
-| 2016–2020 | Assistant Engineer (Electrical) | Ashuganj Power Station Company Ltd. (APSCL), B.Baria, Bangladesh |
-| 2015–2016 | Assistant Engineer | Bangladesh Rural Electrification Board (BREB), Bangladesh. |
-| 2013–2015 | Co-Founder & CEO | Cloud Technology BD, Bangladesh |
+{% include professional-experience.md %}
 
 ---
 
