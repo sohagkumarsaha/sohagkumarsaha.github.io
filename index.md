@@ -23,6 +23,11 @@ In December 2024, he received his **Master of Science in ECE** from Tennessee Te
   <div class="timeline-item is-latest">
     <span class="timeline-dot"></span>
     <div class="timeline-date">July 2026 <span class="timeline-badge">Latest</span></div>
+    <div class="timeline-text">Our paper, <em>"Adaptive Critic Design-Based Real-Time Wind Power Forecasting for Community Microgrid,"</em> has been <strong>accepted</strong> for presentation and publication at the <strong>58th North American Power Symposium (NAPS 2026)</strong>, Michigan, USA. The work presents a real-time adaptive critic design based model for real-time AI-enabled wind power forecasting in community microgrids using Typhoon HIL.</div>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-dot"></span>
+    <div class="timeline-date">July 2026</div>
     <div class="timeline-text">After a long immigration journey, I am delighted to share that I have officially become a <strong>U.S. Lawful Permanent Resident</strong>. I am grateful to everyone who supported me throughout this process and look forward to the next chapter of my research and professional career.</div>
   </div>
   <div class="timeline-item">
@@ -45,13 +50,12 @@ In December 2024, he received his **Master of Science in ECE** from Tennessee Te
     <div class="timeline-date">Aug 2025</div>
     <div class="timeline-text">Honored to share that I have been <strong>elevated to the grade of Senior Member of IEEE</strong>! The Senior Member grade is the highest level for which one may apply, requiring ≥10 years of professional experience, significant performance over ≥5 years, and peer recognition through three recommendation letters from IEEE Senior Members. Only ~10% of nearly half a million IEEE members hold this distinction.</div>
   </div>
-  <div class="timeline-item">
+  <!-- ── Hidden items revealed by "Read More" ── -->
+  <div class="timeline-item timeline-extra" style="display:none;">
     <span class="timeline-dot"></span>
     <div class="timeline-date">Feb 2025</div>
     <div class="timeline-text">Our paper on <em>"Modbus TCP/IP Based BESS Plant Controller Operations for a Peak Shaving Application"</em> was <strong>accepted and presented</strong> at the <strong>2025 IEEE 9th Texas Power and Energy Conference (TPEC)</strong>, College Station, TX.</div>
   </div>
-
-  <!-- ── Hidden items revealed by "Read More" ── -->
   <div class="timeline-item timeline-extra" style="display:none;">
     <span class="timeline-dot"></span>
     <div class="timeline-date">Dec 2024</div>
