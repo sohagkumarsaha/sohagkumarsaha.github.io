@@ -23,7 +23,7 @@ In December 2024, he received his **Master of Science in ECE** from Tennessee Te
   <div class="timeline-item is-latest">
     <span class="timeline-dot"></span>
     <div class="timeline-date">July 2026 <span class="timeline-badge">Latest</span></div>
-    <div class="timeline-text">Our paper, <em>"Adaptive Critic Design-Based Real-Time Wind Power Forecasting for Community Microgrid,"</em> has been <strong>accepted</strong> for presentation and publication at the <strong>58th North American Power Symposium (NAPS 2026)</strong>, Michigan, USA. The work presents a real-time adaptive critic design based model for real-time AI-enabled wind power forecasting in community microgrids using Typhoon HIL.</div>
+    <div class="timeline-text">Our paper, <em>"Adaptive Critic Design-Based Real-Time Wind Power Forecasting for Community Microgrid,"</em> has been <strong>accepted</strong> for presentation and publication at the <strong>58th North American Power Symposium (NAPS 2026)</strong>, Michigan, USA. The work presents a adaptive critic design-model for real-time AI-enabled wind power forecasting in community microgrids using Typhoon HIL.</div>
   </div>
   <div class="timeline-item">
     <span class="timeline-dot"></span>
