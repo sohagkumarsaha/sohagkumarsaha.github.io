@@ -22,17 +22,17 @@ In December 2024, he received his **Master of Science in ECE** from Tennessee Te
   <!-- ── Always visible: top 6 ── -->
   <div class="timeline-item is-latest">
     <span class="timeline-dot"></span>
-    <div class="timeline-date">July 2026 <span class="timeline-badge">Latest</span></div>
-    <div class="timeline-text">Our paper, <em>"Adaptive Critic Design-Based Real-Time Wind Power Forecasting for Community Microgrid,"</em> has been <strong>accepted</strong> for presentation and publication at the <strong>58th North American Power Symposium (NAPS 2026)</strong>, Michigan, USA. The work presents a real-time adaptive critic design based model for real-time AI-enabled wind power forecasting in community microgrids using Typhoon HIL.</div>
+    <div class="timeline-date">July 23, 2026 <span class="timeline-badge">Latest</span></div>
+    <div class="timeline-text">Our paper, <em>"Adaptive Critic Design-Based Real-Time Wind Power Forecasting for Community Microgrid,"</em> has been <strong>accepted</strong> for presentation and publication at the <strong>58th North American Power Symposium (NAPS 2026)</strong>, Michigan, USA. The work presents a adaptive critic design-model for real-time AI-enabled wind power forecasting in community microgrids using Typhoon HIL.</div>
   </div>
   <div class="timeline-item">
     <span class="timeline-dot"></span>
-    <div class="timeline-date">July 2026</div>
+    <div class="timeline-date">July 8, 2026</div>
     <div class="timeline-text">After a long immigration journey, I am delighted to share that I have officially become a <strong>U.S. Lawful Permanent Resident</strong>. I am grateful to everyone who supported me throughout this process and look forward to the next chapter of my research and professional career.</div>
   </div>
   <div class="timeline-item">
     <span class="timeline-dot"></span>
-    <div class="timeline-date">May 2026</div>
+    <div class="timeline-date">May 6, 2026</div>
     <div class="timeline-text">Our paper on <em>"Meta-DQN Tuned TD3-based Safety-Aware Deep Reinforcement Learning for Energy Management System in Community Microgrids"</em> is <strong>accepted</strong> for presentation and publication at the <strong>2026 61st IEEE Industry Applications Society Annual Meeting</strong>, Vancouver, Canada, October 2026.</div>
   </div>
   <div class="timeline-item">
