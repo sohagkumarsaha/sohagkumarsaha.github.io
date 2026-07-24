@@ -43,7 +43,7 @@ In December 2024, he received his **Master of Science in ECE** from Tennessee Te
   <div class="timeline-item">
     <span class="timeline-dot"></span>
     <div class="timeline-date">Dec 2025</div>
-    <div class="timeline-text">Our paper on <em>"An Enhanced Linear Active Disturbance Rejection Controller-Based Dual Active Bridge Converters for EV Charging"</em> was <strong>accepted and presented</strong> at the <strong>IEEE ECCE 2025</strong>, Philadelphia, PA, USA, October 2025.</div>
+    <div class="timeline-text">Our paper on <em>"An Enhanced Linear Active Disturbance Rejection Controller-Based Dual Active Bridge Converters for EV Charging"</em> was <strong>accepted and presented</strong> at the <strong>IEEE Energy Conversion Conference and Expo (ECCE) 2025</strong>, Philadelphia, Pennsylvania, USA, October 2025.</div>
   </div>
   <div class="timeline-item">
     <span class="timeline-dot"></span>
