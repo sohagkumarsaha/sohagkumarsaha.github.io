@@ -22,11 +22,11 @@ toc_icon: "book"
 
 {% bibliography --query @inproceedings %}
 
----
-
+{% comment %}
 ## Journal Papers
 
 {% bibliography --query @article %}
+{% endcomment %}
 
 ---
 
