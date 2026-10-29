@@ -23,7 +23,7 @@ In December 2024, he received his **Master of Science in Electrical and Computer
   <div class="timeline-item is-latest">
     <span class="timeline-dot"></span>
     <div class="timeline-date">October 29, 2026 <span class="timeline-badge">Latest</span></div>
-    <div class="timeline-text">Our paper, <em>"Comparison of Flyback Microinverter Topologies for Residential PV Systems,"</em> was <strong>accepted</strong> at the <strong>IEEE 58th North American Power Symposium (NAPS 2026)</strong>, Michigan, USA. I have also <strong>presented</strong> the paper at the conference. Co-authors: S M Imrat Rahman, Ali Arzani, and Satish M. Mahajan.</div>
+    <div class="timeline-text">Our paper, <em>"Comparison of Flyback Microinverter Topologies for Residential PV Systems,"</em> was <strong>accepted</strong> at the <strong>IEEE 58th North American Power Symposium (NAPS 2026)</strong>, Michigan, USA. I have also <strong>presented</strong> the paper at the conference.</div>
   </div>
   <div class="timeline-item">
     <span class="timeline-dot"></span>
