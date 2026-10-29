@@ -23,6 +23,11 @@ In December 2024, he received his **Master of Science in Electrical and Computer
   <div class="timeline-item is-latest">
     <span class="timeline-dot"></span>
     <div class="timeline-date">October 29, 2026 <span class="timeline-badge">Latest</span></div>
+    <div class="timeline-text">I received a <strong>scholarship to attend CAMLIS 2026</strong> (Conference on Applied Machine Learning in Information Security), held <strong>October 21–23, 2026, in Arlington, VA</strong>. The conference brought together researchers, practitioners, and policymakers to explore applications of machine learning in cybersecurity. Through conference sessions, I deepened my understanding of <strong>artificial intelligence, machine learning, large language models (LLMs), and their applications in cybersecurity</strong>.</div>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-dot"></span>
+    <div class="timeline-date">October 29, 2026</div>
     <div class="timeline-text">Our paper, <em>"Comparison of Flyback Microinverter Topologies for Residential PV Systems,"</em> was <strong>accepted</strong> at the <strong>IEEE 58th North American Power Symposium (NAPS 2026)</strong>, Michigan, USA. I have also <strong>presented</strong> the paper at the conference.</div>
   </div>
   <div class="timeline-item">
@@ -45,12 +50,12 @@ In December 2024, he received his **Master of Science in Electrical and Computer
     <div class="timeline-date">Jan 2026</div>
     <div class="timeline-text">Our paper on <em>"Real-Time Implementation of Consensus Tracking Control for Battery Energy Management and SoC Balancing"</em> is <strong>accepted</strong> for presentation and publication at the <strong>IEEE 10th Texas Power and Energy Conference (TPEC)</strong>, College Station, TX, USA, February 2026.</div>
   </div>
-  <div class="timeline-item">
+  <!-- ── Hidden items revealed by "Read More" ── -->
+  <div class="timeline-item timeline-extra" style="display:none;">
     <span class="timeline-dot"></span>
     <div class="timeline-date">Dec 2025</div>
     <div class="timeline-text">Our paper on <em>"An Enhanced Linear Active Disturbance Rejection Controller-Based Dual Active Bridge Converters for EV Charging"</em> was <strong>accepted and presented</strong> at the <strong>IEEE Energy Conversion Conference and Expo (ECCE) 2025</strong>, Philadelphia, Pennsylvania, USA, October 2025.</div>
   </div>
-  <!-- ── Hidden items revealed by "Read More" ── -->
   <div class="timeline-item timeline-extra" style="display:none;">
     <span class="timeline-dot"></span>
     <div class="timeline-date">Aug 2025</div>
