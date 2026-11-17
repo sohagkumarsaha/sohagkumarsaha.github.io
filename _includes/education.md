@@ -33,7 +33,7 @@
   </div>
   <div class="timeline-item">
     <span class="timeline-dot"></span>
-    <img class="timeline-logo" src="{{ '/assets/images/logos/batila-school.jpg' | relative_url }}" alt="Batila High School logo">
+    <img class="timeline-logo" src="{{ '/assets/images/logos/batila-school.png' | relative_url }}" alt="Batila High School logo">
     <div class="timeline-body">
       <div class="timeline-date">2001 – 2006</div>
       <div class="timeline-text"><strong>S.S.C.</strong> (Science)<br>Batila High School, Manikganj, Bangladesh<br>URL: <a href="https://locator.eduportalbd.com/institutes/?ins=110963" target="_blank">https://locator.eduportalbd.com/institutes/?ins=110963</a></div>
