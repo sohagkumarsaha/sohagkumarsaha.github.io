@@ -22,7 +22,16 @@ In December 2024, he received his **Master of Science in Electrical and Computer
   <!-- ── Always visible: top 6 ── -->
   <div class="timeline-item is-latest">
     <span class="timeline-dot"></span>
-    <div class="timeline-date">October 29, 2026 <span class="timeline-badge">Latest</span></div>
+    <div class="timeline-date">November 17, 2026 <span class="timeline-badge">Latest</span></div>
+    <div class="timeline-text">
+      <p><strong>Graduate Internship Confirmation from the National Laboratory of the Rockies</strong></p>
+      <p>I&rsquo;m delighted to share that I&rsquo;ve received official confirmation of my Graduate Internship at the National Laboratory of the Rockies (NLR), formerly the National Renewable Energy Laboratory (NREL), in Golden, Colorado. The internship is scheduled to begin in January 2027 and focuses on modeling, real-time simulation, and hardware-in-the-loop (HIL) testing of distribution systems.</p>
+      <p>Over the past five years, my Ph.D. research in Electrical and Computer Engineering at Tennessee Tech has focused on intelligent control and energy management for microgrids, real-time simulation, and controller hardware-in-the-loop (CHIL) validation. The experiments, challenges, and lessons along the way make this milestone especially meaningful.</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-dot"></span>
+    <div class="timeline-date">October 29, 2026</div>
     <div class="timeline-text">I received a <strong>scholarship to attend CAMLIS 2026</strong> (Conference on Applied Machine Learning in Information Security), held <strong>October 21–23, 2026, in Arlington, VA</strong>. The conference brought together researchers, practitioners, and policymakers to explore applications of machine learning in cybersecurity. Through conference sessions, I deepened my understanding of <strong>artificial intelligence, machine learning, large language models (LLMs), and their applications in cybersecurity</strong>.</div>
   </div>
   <div class="timeline-item">
@@ -45,12 +54,12 @@ In December 2024, he received his **Master of Science in Electrical and Computer
     <div class="timeline-date">May 6, 2026</div>
     <div class="timeline-text">Our paper on <em>"Meta-DQN Tuned TD3-based Safety-Aware Deep Reinforcement Learning for Energy Management System in Community Microgrids"</em> is <strong>accepted</strong> for presentation and publication at the <strong>2026 61st IEEE Industry Applications Society Annual Meeting</strong>, Vancouver, Canada, October 2026.</div>
   </div>
-  <div class="timeline-item">
+  <!-- ── Hidden items revealed by "Read More" ── -->
+  <div class="timeline-item timeline-extra" style="display:none;">
     <span class="timeline-dot"></span>
     <div class="timeline-date">Jan 2026</div>
     <div class="timeline-text">Our paper on <em>"Real-Time Implementation of Consensus Tracking Control for Battery Energy Management and SoC Balancing"</em> is <strong>accepted</strong> for presentation and publication at the <strong>IEEE 10th Texas Power and Energy Conference (TPEC)</strong>, College Station, TX, USA, February 2026.</div>
   </div>
-  <!-- ── Hidden items revealed by "Read More" ── -->
   <div class="timeline-item timeline-extra" style="display:none;">
     <span class="timeline-dot"></span>
     <div class="timeline-date">Dec 2025</div>
