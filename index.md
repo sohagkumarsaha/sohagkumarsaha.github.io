@@ -22,7 +22,16 @@ In December 2024, he received his **Master of Science in Electrical and Computer
   <!-- ── Always visible: top 6 ── -->
   <div class="timeline-item is-latest">
     <span class="timeline-dot"></span>
-    <div class="timeline-date">July 23, 2026 <span class="timeline-badge">Latest</span></div>
+    <div class="timeline-date">November 17, 2026 <span class="timeline-badge">Latest</span></div>
+    <div class="timeline-text">
+      <p><strong>Graduate Internship Confirmation from the National Laboratory of the Rockies</strong></p>
+      <p>I&rsquo;m delighted to share that I&rsquo;ve received official confirmation of my Graduate Internship at the National Laboratory of the Rockies (NLR), formerly the National Renewable Energy Laboratory (NREL), in Golden, Colorado. The internship is scheduled to begin in January 2027 and focuses on modeling, real-time simulation, and hardware-in-the-loop (HIL) testing of distribution systems.</p>
+      <p>Over the past five years, my Ph.D. research in Electrical and Computer Engineering at Tennessee Tech has focused on intelligent control and energy management for microgrids, real-time simulation, and controller hardware-in-the-loop (CHIL) validation. The experiments, challenges, and lessons along the way make this milestone especially meaningful.</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <span class="timeline-dot"></span>
+    <div class="timeline-date">July 23, 2026</div>
     <div class="timeline-text">Our paper, <em>"Adaptive Critic Design-Based Real-Time Wind Power Forecasting for Community Microgrid,"</em> has been <strong>accepted</strong> for presentation and publication at the <strong>58th North American Power Symposium (NAPS 2026)</strong>, Michigan, USA. The work presents a adaptive critic design-model for real-time AI-enabled wind power forecasting in community microgrids using Typhoon HIL.</div>
   </div>
   <div class="timeline-item">
@@ -45,12 +54,12 @@ In December 2024, he received his **Master of Science in Electrical and Computer
     <div class="timeline-date">Dec 2025</div>
     <div class="timeline-text">Our paper on <em>"An Enhanced Linear Active Disturbance Rejection Controller-Based Dual Active Bridge Converters for EV Charging"</em> was <strong>accepted and presented</strong> at the <strong>IEEE Energy Conversion Conference and Expo (ECCE) 2025</strong>, Philadelphia, Pennsylvania, USA, October 2025.</div>
   </div>
-  <div class="timeline-item">
+  <!-- ── Hidden items revealed by "Read More" ── -->
+  <div class="timeline-item timeline-extra" style="display:none;">
     <span class="timeline-dot"></span>
     <div class="timeline-date">Aug 2025</div>
     <div class="timeline-text">Honored to share that I have been <strong>elevated to the grade of Senior Member of IEEE</strong>! The Senior Member grade is the highest level for which one may apply, requiring ≥10 years of professional experience, significant performance over ≥5 years, and peer recognition through three recommendation letters from IEEE Senior Members. Only ~10% of nearly half a million IEEE members hold this distinction.</div>
   </div>
-  <!-- ── Hidden items revealed by "Read More" ── -->
   <div class="timeline-item timeline-extra" style="display:none;">
     <span class="timeline-dot"></span>
     <div class="timeline-date">Feb 2025</div>
